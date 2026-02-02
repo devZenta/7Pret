@@ -1,0 +1,113 @@
+# Lefthook configuration
+
+output:
+  - meta
+  - summary
+  - execution_info
+
+# PRE-COMMIT HOOK
+pre-commit:
+  parallel: true
+  commands:
+    format-check:
+      glob: "*.{js,jsx,ts,tsx,json,jsonc}"
+      run: bunx biome format --diagnostic-level=error --no-errors-on-unmatched {staged_files}
+      stage_fixed: true
+
+    biome-lint:
+      glob: "*.{js,jsx,ts,tsx,json,jsonc}"
+      run: bunx biome lint --diagnostic-level=error --no-errors-on-unmatched {staged_files}
+      stage_fixed: true
+
+    typecheck:
+      glob: "*.{ts,tsx}"
+      run: bunx tsc --noEmit
+
+    no-console:
+      glob: "*.{js,jsx,ts,tsx}"
+      run: |
+        if grep -rn "console\.log\|console\.debug" {staged_files} 2>/dev/null; then
+          echo "Console statements found. Please remove them."
+          exit 1
+        fi
+      skip:
+        - merge
+        - rebase
+
+    todo-check:
+      glob: "*.{js,jsx,ts,tsx}"
+      run: |
+        if grep -rn "TODO\|FIXME" {staged_files} 2>/dev/null | grep -v "#[0-9]"; then
+          echo "Warning: TODO/FIXME found without issue reference (#123)"
+        fi
+      skip:
+        - merge
+        - rebase
+
+# COMMIT-MSG HOOK
+commit-msg:
+  commands:
+    commitlint:
+      run: |
+        MSG=$(cat {1})
+        PATTERN="^(feat|fix|docs|style|refactor|perf|test|chore|ci|build|revert)(\(.+\))?!?: .{1,100}"
+
+        if ! echo "$MSG" | grep -qE "$PATTERN"; then
+          echo "Invalid commit message format!"
+          echo ""
+          echo "Expected format: <type>(<scope>): <subject>"
+          echo ""
+          echo "Types: feat, fix, docs, style, refactor, perf, test, chore, ci, build, revert"
+          echo ""
+          echo "Examples:"
+          echo "  feat(auth): add login functionality"
+          echo "  fix(api): resolve null pointer exception"
+          echo "  docs: update README"
+          echo ""
+          echo "Your commit message: $MSG"
+          exit 1
+        fi
+
+        SUBJECT=$(echo "$MSG" | head -n1 | sed -E 's/^[^:]+: //')
+        if [ ${#SUBJECT} -lt 3 ]; then
+          echo "Commit subject too short (minimum 3 characters)"
+          exit 1
+        fi
+
+# PRE-PUSH HOOK
+pre-push:
+  parallel: true
+  commands:
+    biome-check-all:
+      run: bunx biome check --diagnostic-level=error .
+
+    typecheck-full:
+      run: bunx tsc --noEmit
+
+    deps-check:
+      run: |
+        if git diff --name-only origin/main...HEAD | grep -q "package.json\|bun.lockb"; then
+          echo "Dependencies changed - make sure they are tested"
+        fi
+      skip:
+        - ref: main
+
+# POST-MERGE HOOK
+post-merge:
+  commands:
+    deps-install:
+      run: |
+        if git diff --name-only HEAD@{1} HEAD | grep -q "package.json\|bun.lockb"; then
+          echo "Dependencies changed, running bun install..."
+          bun install
+        fi
+
+# POST-CHECKOUT HOOK
+post-checkout:
+  commands:
+    deps-sync:
+      run: |
+        if [ {1} != {2} ] && git diff --name-only {1} {2} | grep -q "package.json\|bun.lockb"; then
+          echo "Dependencies differ between branches, running bun install..."
+          bun install
+        fi
