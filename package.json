@@ -7,13 +7,14 @@
 		"dev": "vite",
 		"build": "tsc -b && vite build",
 		"preview": "vite preview",
+		"start": "vite preview --host --port ${PORT:-4173}",
 		"format": "biome format --write .",
 		"format:check": "biome format .",
 		"check": "biome check .",
 		"check:fix": "biome check --write .",
 		"lint": "biome lint .",
 		"typecheck": "tsc --noEmit",
-		"prepare": "lefthook install"
+		"prepare": "node -e \"if (process.env.NODE_ENV !== 'production') require('child_process').execSync('lefthook install', {stdio: 'inherit'})\""
 	},
 	"dependencies": {
 		"react": "^19.2.0",
