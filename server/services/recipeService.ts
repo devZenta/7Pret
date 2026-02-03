@@ -1,19 +1,34 @@
 import prisma from "../../src/lib/prisma";
 
+type Ingredient = { name: string; quantity: number; unit: string };
+
 export const recipeService = {
-	// Récupérer toutes les recettes perso
 	getAll: async () => {
-		return await prisma.customRecipe.findMany();
-	},
-
-	// Créer une recette
-	create: async (data: unknown) => {
-		return await prisma.customRecipe.create({
-			data: data as Parameters<typeof prisma.customRecipe.create>[0]["data"],
+		const recipes = await prisma.recipe.findMany({
+			orderBy: { createdAt: "desc" },
 		});
+		return recipes.map((recipe) => ({
+			...recipe,
+			ingredients: recipe.ingredients as Ingredient[],
+			steps: recipe.steps as string[],
+			rating: Number(recipe.rating),
+			createdAt: recipe.createdAt.toISOString(),
+			updatedAt: recipe.updatedAt.toISOString(),
+		}));
 	},
 
-	getById: async (_id: string) => {
-		// TODO: Implémenter la récupération par ID
+	getById: async (id: number) => {
+		const recipe = await prisma.recipe.findUnique({
+			where: { id },
+		});
+		if (!recipe) return null;
+		return {
+			...recipe,
+			ingredients: recipe.ingredients as Ingredient[],
+			steps: recipe.steps as string[],
+			rating: Number(recipe.rating),
+			createdAt: recipe.createdAt.toISOString(),
+			updatedAt: recipe.updatedAt.toISOString(),
+		};
 	},
 };
