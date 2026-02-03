@@ -7,10 +7,10 @@ import {
 import Header from "./components/Header";
 import Catalogue from "./pages/Catalogue/page";
 import RecipeDetail from "./pages/Catalogue/recipedetail";
+import CertifRecipe from "./pages/CertifRecipe/page";
 import CreateRecipe from "./pages/CreateRecipe/page";
 import Home from "./pages/Home/page";
 import ShoppingList from "./pages/ShoppingList/page";
-import CertifRecipe from "./pages/CertifRecipe/page";
 
 function App() {
 	return (
