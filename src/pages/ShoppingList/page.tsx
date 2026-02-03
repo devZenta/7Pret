@@ -1,7 +1,15 @@
+import type React from "react";
 import { useEffect, useState } from "react";
 import "./ShoppingList.css";
+
+interface ShoppingItem {
+	name: string;
+	quantity: string | number;
+	unit: string;
+}
+
 const ShoppingList = () => {
-	const [panier, setPanier] = useState<any[]>([]);
+	const [panier, setPanier] = useState<ShoppingItem[]>([]);
 	const [newItem, setNewItem] = useState("");
 
 	useEffect(() => {
@@ -27,7 +35,7 @@ const ShoppingList = () => {
 		e.preventDefault();
 		if (!newItem.trim()) return;
 
-		const item = { name: newItem, quantity: "", unit: "" };
+		const item: ShoppingItem = { name: newItem, quantity: "", unit: "" };
 		const newPanier = [...panier, item];
 		setPanier(newPanier);
 		localStorage.setItem("panier", JSON.stringify(newPanier));
@@ -37,6 +45,19 @@ const ShoppingList = () => {
 	return (
 		<div className="shopping-list-container">
 			<h1 className="shopping-list-title">Ma Liste de Courses</h1>
+
+			<form className="add-item-form" onSubmit={handleAddItem}>
+				<input
+					type="text"
+					className="item-input"
+					placeholder="Ajouter un article..."
+					value={newItem}
+					onChange={(e) => setNewItem(e.target.value)}
+				/>
+				<button type="submit" className="add-button">
+					Ajouter
+				</button>
+			</form>
 
 			{panier.length === 0 ? (
 				<p className="empty-message">Votre panier est vide.</p>
