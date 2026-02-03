@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import recipesData from "../../data/recipes.json";
 
@@ -41,7 +40,11 @@ const Catalogue = () => {
 						<h3>{recipe.name}</h3>
 						<p>{recipe.cuisine}</p>
 						<p>
-							Temps: {recipe.Time} min ........ Pers: {recipe.servings}
+							{recipe.Time} min
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pers: {recipe.servings}
 						</p>
 						<img
 							src={recipe.image}
