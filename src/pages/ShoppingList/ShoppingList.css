@@ -1,0 +1,142 @@
+/* Container for the entire shopping list section */
+.shopping-list-container {
+	max-width: 600px;
+	margin: 2rem auto;
+	padding: 2rem;
+	background-color: #1a1a1a;
+	color: #eedcca;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	font-family: sans-serif;
+}
+
+/* Main title */
+.shopping-list-title {
+	text-align: center;
+	color: #c67a53;
+	margin-bottom: 1.5rem;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+/* Form section for adding items */
+.add-item-form {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 2rem;
+}
+
+.item-input {
+	flex-grow: 1;
+	padding: 10px 15px;
+	background-color: #2d2d2d;
+	color: #eedcca;
+	border: 1px solid #444;
+	border-radius: 4px;
+	font-size: 1rem;
+	transition: border-color 0.3s;
+}
+
+.item-input:focus {
+	outline: none;
+	border-color: #c67a53;
+}
+
+.add-button {
+	padding: 10px 20px;
+	background-color: #c67a53;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background-color 0.3s;
+}
+
+.add-button:hover {
+	background-color: #a76556;
+}
+
+/* List Items */
+.shopping-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.shopping-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #2d2d2d;
+	border: 1px solid #3d3d3d;
+	color: #eedcca;
+	padding: 12px 15px;
+	margin-bottom: 8px;
+	border-radius: 4px;
+	transition:
+		transform 0.2s,
+		box-shadow 0.2s;
+}
+
+.shopping-item:hover {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.shopping-item.completed span {
+	text-decoration: line-through;
+	color: #777;
+}
+
+/* Actions within a list item */
+.item-actions {
+	display: flex;
+	gap: 8px;
+}
+
+.delete-button {
+	background-color: #3e2020;
+	color: #ff8a80;
+	border: 1px solid #5c2b2b;
+	padding: 6px 12px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 0.9rem;
+	transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+	background-color: #5c2b2b;
+}
+
+.checkbox {
+	margin-right: 12px;
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+	accent-color: #c67a53;
+}
+
+/* Empty state message */
+.empty-message {
+	text-align: center;
+	color: #a76556;
+	font-style: italic;
+	margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+	.shopping-list-container {
+		margin: 1rem;
+		padding: 1rem;
+	}
+
+	.add-item-form {
+		flex-direction: column;
+	}
+
+	.add-button {
+		width: 100%;
+	}
+}

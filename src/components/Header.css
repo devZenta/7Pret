@@ -1,0 +1,92 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem 4rem;
+	background-color: #ece0d1;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Ombre douce et moderne */
+	position: sticky;
+	top: 0;
+	z-index: 1000; /* Toujours au dessus */
+}
+
+/* Calibrage du logo */
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo img {
+	height: 60px; /* Taille fixe et professionnelle */
+	width: auto;
+	object-fit: contain;
+	display: block;
+	transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+	transform: scale(1.05);
+}
+
+.logo h1 {
+	margin: 0;
+	font-size: 1.5rem;
+	color: #2d2d2d;
+	margin-left: 10px; /* Espace si jamais il y a du texte à côté */
+}
+
+/* Navigation propre */
+.navigation ul {
+	list-style: none;
+	display: flex;
+	gap: 32px; /* Espacement aéré */
+	margin: 0;
+	padding: 0;
+	align-items: center;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: #5d4037; /* Marron foncé élégant */
+	font-weight: 600;
+	font-size: 1rem;
+	letter-spacing: 0.5px;
+	transition: all 0.3s ease;
+	position: relative;
+	padding: 5px 0;
+}
+
+/* Effet au survol */
+.navigation a:hover {
+	color: #c67a53; /* Ta couleur terracotta */
+}
+
+.navigation a::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #c67a53;
+	transition: width 0.3s ease;
+}
+
+.navigation a:hover::after {
+	width: 100%;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+	.header {
+		flex-direction: column;
+		padding: 1rem;
+		gap: 1rem;
+	}
+
+	.navigation ul {
+		gap: 15px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
