@@ -1,1280 +1,1350 @@
 [
-  {
-    "id": 1,
-    "name": "Risotto aux champignons",
-    "type": "plat",
-    "cuisine": "Italienne",
-    "difficulty": "Moyen",
-    "prepTime": 15,
-    "cookTime": 30,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Riz arborio", "quantity": 300, "unit": "g" },
-      { "name": "Champignons", "quantity": 250, "unit": "g" }
-    ],
-    "steps": [
-      "Faire revenir les champignons.",
-      "Ajouter le riz.",
-      "Cuire avec du bouillon."
-    ],
-    "rating": 4.5
-  },
-  {
-    "id": 2,
-    "name": "Poulet basquaise",
-    "type": "plat",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 20,
-    "cookTime": 40,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Poulet", "quantity": 800, "unit": "g" },
-      { "name": "Poivrons", "quantity": 2, "unit": "pcs" }
-    ],
-    "steps": [
-      "Faire revenir le poulet.",
-      "Ajouter les poivrons.",
-      "Laisser mijoter."
-    ],
-    "rating": 4.2
-  },
-  {
-    "id": 3,
-    "name": "Tacos végétariens",
-    "type": "plat",
-    "cuisine": "Mexicaine",
-    "difficulty": "Facile",
-    "prepTime": 15,
-    "cookTime": 10,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Tortillas", "quantity": 8, "unit": "pcs" },
-      { "name": "Haricots rouges", "quantity": 400, "unit": "g" }
-    ],
-    "steps": [
-      "Chauffer les tortillas.",
-      "Préparer la garniture.",
-      "Assembler les tacos."
-    ],
-    "rating": 4.0
-  },
-  {
-    "id": 4,
-    "name": "Pad Thaï",
-    "type": "plat",
-    "cuisine": "Thaïlandaise",
-    "difficulty": "Moyen",
-    "prepTime": 20,
-    "cookTime": 15,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Nouilles de riz", "quantity": 250, "unit": "g" },
-      { "name": "Crevettes", "quantity": 200, "unit": "g" }
-    ],
-    "steps": [
-      "Cuire les nouilles.",
-      "Sauter les crevettes.",
-      "Mélanger avec la sauce."
-    ],
-    "rating": 4.6
-  },
-  {
-    "id": 5,
-    "name": "Soupe miso",
-    "type": "entrée",
-    "cuisine": "Japonaise",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 10,
-    "servings": 2,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Pâte miso", "quantity": 2, "unit": "càs" },
-      { "name": "Tofu", "quantity": 100, "unit": "g" }
-    ],
-    "steps": [
-      "Faire chauffer l'eau.",
-      "Ajouter la pâte miso.",
-      "Incorporer le tofu."
-    ],
-    "rating": 4.3
-  },
-  {
-    "id": 6,
-    "name": "Salade César",
-    "type": "entrée",
-    "cuisine": "Américaine",
-    "difficulty": "Facile",
-    "prepTime": 15,
-    "cookTime": 0,
-    "servings": 2,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Laitue romaine", "quantity": 1, "unit": "pcs" },
-      { "name": "Poulet grillé", "quantity": 100, "unit": "g" }
-    ],
-    "steps": ["Préparer la salade.", "Ajouter le poulet.", "Assaisonner."],
-    "rating": 4.4
-  },
-  {
-    "id": 7,
-    "name": "Quiche lorraine",
-    "type": "plat",
-    "cuisine": "Française",
-    "difficulty": "Moyen",
-    "prepTime": 20,
-    "cookTime": 35,
-    "servings": 6,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Pâte brisée", "quantity": 1, "unit": "pcs" },
-      { "name": "Lardons", "quantity": 150, "unit": "g" }
-    ],
-    "steps": ["Préparer la pâte.", "Ajouter la garniture.", "Cuire au four."],
-    "rating": 4.7
-  },
-  {
-    "id": 8,
-    "name": "Curry de légumes",
-    "type": "plat",
-    "cuisine": "Indienne",
-    "difficulty": "Moyen",
-    "prepTime": 25,
-    "cookTime": 30,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Pommes de terre", "quantity": 300, "unit": "g" },
-      { "name": "Carottes", "quantity": 200, "unit": "g" }
-    ],
-    "steps": [
-      "Faire revenir les légumes.",
-      "Ajouter les épices.",
-      "Laisser mijoter."
-    ],
-    "rating": 4.1
-  },
-  {
-    "id": 9,
-    "name": "Pizza Margherita",
-    "type": "plat",
-    "cuisine": "Italienne",
-    "difficulty": "Facile",
-    "prepTime": 15,
-    "cookTime": 20,
-    "servings": 2,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Pâte à pizza", "quantity": 1, "unit": "pcs" },
-      { "name": "Mozzarella", "quantity": 125, "unit": "g" }
-    ],
-    "steps": ["Étaler la pâte.", "Ajouter la garniture.", "Cuire au four."],
-    "rating": 4.8
-  },
-  {
-    "id": 10,
-    "name": "Falafels",
-    "type": "plat",
-    "cuisine": "Moyen-Orient",
-    "difficulty": "Moyen",
-    "prepTime": 30,
-    "cookTime": 10,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Pois chiches", "quantity": 250, "unit": "g" },
-      { "name": "Oignon", "quantity": 1, "unit": "pcs" }
-    ],
-    "steps": [
-      "Mixer les ingrédients.",
-      "Former des boulettes.",
-      "Frire les falafels."
-    ],
-    "rating": 4.5
-  },
-  {
-    "id": 11,
-    "name": "Boeuf bourguignon",
-    "type": "plat",
-    "cuisine": "Française",
-    "difficulty": "Difficile",
-    "prepTime": 30,
-    "cookTime": 180,
-    "servings": 6,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Boeuf", "quantity": 1, "unit": "kg" },
-      { "name": "Vin rouge", "quantity": 75, "unit": "cl" }
-    ],
-    "steps": [
-      "Faire revenir le boeuf.",
-      "Ajouter le vin.",
-      "Cuire longuement."
-    ],
-    "rating": 4.9
-  },
-  {
-    "id": 12,
-    "name": "Taboulé",
-    "type": "entrée",
-    "cuisine": "Libanaise",
-    "difficulty": "Facile",
-    "prepTime": 20,
-    "cookTime": 0,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Boulgour", "quantity": 200, "unit": "g" },
-      { "name": "Tomates", "quantity": 3, "unit": "pcs" }
-    ],
-    "steps": [
-      "Préparer les légumes.",
-      "Mélanger avec le boulgour.",
-      "Assaisonner."
-    ],
-    "rating": 4.2
-  },
-  {
-    "id": 13,
-    "name": "Ratatouille",
-    "type": "plat",
-    "cuisine": "Française",
-    "difficulty": "Moyen",
-    "prepTime": 25,
-    "cookTime": 40,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Aubergine", "quantity": 1, "unit": "pcs" },
-      { "name": "Courgette", "quantity": 2, "unit": "pcs" }
-    ],
-    "steps": ["Couper les légumes.", "Faire revenir.", "Laisser mijoter."],
-    "rating": 4.3
-  },
-  {
-    "id": 14,
-    "name": "Sushi",
-    "type": "plat",
-    "cuisine": "Japonaise",
-    "difficulty": "Difficile",
-    "prepTime": 40,
-    "cookTime": 20,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Riz à sushi", "quantity": 300, "unit": "g" },
-      { "name": "Saumon", "quantity": 200, "unit": "g" }
-    ],
-    "steps": ["Cuire le riz.", "Préparer le poisson.", "Rouler les sushis."],
-    "rating": 4.7
-  },
-  {
-    "id": 15,
-    "name": "Tarte aux pommes",
-    "type": "dessert",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 20,
-    "cookTime": 35,
-    "servings": 6,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Pâte feuilletée", "quantity": 1, "unit": "pcs" },
-      { "name": "Pommes", "quantity": 4, "unit": "pcs" }
-    ],
-    "steps": ["Étaler la pâte.", "Disposer les pommes.", "Cuire au four."],
-    "rating": 4.6
-  },
-  {
-    "id": 16,
-    "name": "Gaspacho",
-    "type": "entrée",
-    "cuisine": "Espagnole",
-    "difficulty": "Facile",
-    "prepTime": 15,
-    "cookTime": 0,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Tomates", "quantity": 5, "unit": "pcs" },
-      { "name": "Concombre", "quantity": 1, "unit": "pcs" }
-    ],
-    "steps": ["Mixer les légumes.", "Assaisonner.", "Servir frais."],
-    "rating": 4.2
-  },
-  {
-    "id": 17,
-    "name": "Chili sin carne",
-    "type": "plat",
-    "cuisine": "Mexicaine",
-    "difficulty": "Facile",
-    "prepTime": 20,
-    "cookTime": 30,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Haricots rouges", "quantity": 400, "unit": "g" },
-      { "name": "Maïs", "quantity": 150, "unit": "g" }
-    ],
-    "steps": [
-      "Faire revenir les légumes.",
-      "Ajouter les haricots.",
-      "Laisser mijoter."
-    ],
-    "rating": 4.1
-  },
-  {
-    "id": 18,
-    "name": "Lasagnes",
-    "type": "plat",
-    "cuisine": "Italienne",
-    "difficulty": "Moyen",
-    "prepTime": 30,
-    "cookTime": 45,
-    "servings": 6,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Pâtes à lasagne", "quantity": 9, "unit": "pcs" },
-      { "name": "Viande hachée", "quantity": 400, "unit": "g" }
-    ],
-    "steps": ["Préparer la sauce.", "Monter les lasagnes.", "Cuire au four."],
-    "rating": 4.8
-  },
-  {
-    "id": 19,
-    "name": "Soupe à l'oignon",
-    "type": "entrée",
-    "cuisine": "Française",
-    "difficulty": "Moyen",
-    "prepTime": 20,
-    "cookTime": 40,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Oignons", "quantity": 4, "unit": "pcs" },
-      { "name": "Bouillon", "quantity": 1, "unit": "l" }
-    ],
-    "steps": [
-      "Faire revenir les oignons.",
-      "Ajouter le bouillon.",
-      "Cuire doucement."
-    ],
-    "rating": 4.5
-  },
-  {
-    "id": 20,
-    "name": "Crêpes",
-    "type": "dessert",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 20,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Farine", "quantity": 250, "unit": "g" },
-      { "name": "Lait", "quantity": 50, "unit": "cl" }
-    ],
-    "steps": ["Préparer la pâte.", "Cuire les crêpes.", "Servir."],
-    "rating": 4.9
-  },
-  {
-    "id": 21,
-    "name": "Tajine de poulet",
-    "type": "plat",
-    "cuisine": "Marocaine",
-    "difficulty": "Moyen",
-    "prepTime": 25,
-    "cookTime": 60,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Poulet", "quantity": 800, "unit": "g" },
-      { "name": "Abricots secs", "quantity": 100, "unit": "g" }
-    ],
-    "steps": [
-      "Faire revenir le poulet.",
-      "Ajouter les abricots.",
-      "Laisser mijoter."
-    ],
-    "rating": 4.6
-  },
-  {
-    "id": 22,
-    "name": "Biryani végétarien",
-    "type": "plat",
-    "cuisine": "Indienne",
-    "difficulty": "Difficile",
-    "prepTime": 35,
-    "cookTime": 45,
-    "servings": 6,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Riz basmati", "quantity": 400, "unit": "g" },
-      { "name": "Légumes variés", "quantity": 300, "unit": "g" }
-    ],
-    "steps": ["Cuire le riz.", "Préparer les légumes.", "Assembler et cuire."],
-    "rating": 4.4
-  },
-  {
-    "id": 23,
-    "name": "Moussaka",
-    "type": "plat",
-    "cuisine": "Grecque",
-    "difficulty": "Difficile",
-    "prepTime": 40,
-    "cookTime": 60,
-    "servings": 6,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Aubergines", "quantity": 2, "unit": "pcs" },
-      { "name": "Viande hachée", "quantity": 400, "unit": "g" }
-    ],
-    "steps": [
-      "Préparer les aubergines.",
-      "Cuire la viande.",
-      "Monter la moussaka."
-    ],
-    "rating": 4.3
-  },
-  {
-    "id": 24,
-    "name": "Pancakes",
-    "type": "dessert",
-    "cuisine": "Américaine",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 15,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Farine", "quantity": 200, "unit": "g" },
-      { "name": "Lait", "quantity": 30, "unit": "cl" }
-    ],
-    "steps": ["Préparer la pâte.", "Cuire les pancakes.", "Servir."],
-    "rating": 4.7
-  },
-  {
-    "id": 25,
-    "name": "Bouillabaisse",
-    "type": "plat",
-    "cuisine": "Française",
-    "difficulty": "Difficile",
-    "prepTime": 45,
-    "cookTime": 60,
-    "servings": 6,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Poisson blanc", "quantity": 600, "unit": "g" },
-      { "name": "Fruits de mer", "quantity": 300, "unit": "g" }
-    ],
-    "steps": [
-      "Préparer le bouillon.",
-      "Ajouter le poisson.",
-      "Cuire doucement."
-    ],
-    "rating": 4.5
-  },
-  {
-    "id": 26,
-    "name": "Salade grecque",
-    "type": "entrée",
-    "cuisine": "Grecque",
-    "difficulty": "Facile",
-    "prepTime": 15,
-    "cookTime": 0,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Concombre", "quantity": 1, "unit": "pcs" },
-      { "name": "Feta", "quantity": 100, "unit": "g" }
-    ],
-    "steps": ["Couper les légumes.", "Ajouter la feta.", "Assaisonner."],
-    "rating": 4.3
-  },
-  {
-    "id": 27,
-    "name": "Couscous",
-    "type": "plat",
-    "cuisine": "Maghrébine",
-    "difficulty": "Moyen",
-    "prepTime": 30,
-    "cookTime": 60,
-    "servings": 6,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Semoule", "quantity": 400, "unit": "g" },
-      { "name": "Légumes variés", "quantity": 400, "unit": "g" }
-    ],
-    "steps": [
-      "Préparer la semoule.",
-      "Cuire les légumes.",
-      "Assembler le couscous."
-    ],
-    "rating": 4.6
-  },
-  {
-    "id": 28,
-    "name": "Tarte au citron",
-    "type": "dessert",
-    "cuisine": "Française",
-    "difficulty": "Moyen",
-    "prepTime": 25,
-    "cookTime": 30,
-    "servings": 6,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Pâte sablée", "quantity": 1, "unit": "pcs" },
-      { "name": "Citrons", "quantity": 3, "unit": "pcs" }
-    ],
-    "steps": ["Préparer la pâte.", "Faire la crème citron.", "Cuire au four."],
-    "rating": 4.8
-  },
-  {
-    "id": 29,
-    "name": "Riz cantonais",
-    "type": "plat",
-    "cuisine": "Chinoise",
-    "difficulty": "Facile",
-    "prepTime": 15,
-    "cookTime": 20,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Riz", "quantity": 250, "unit": "g" },
-      { "name": "Jambon", "quantity": 100, "unit": "g" }
-    ],
-    "steps": ["Cuire le riz.", "Ajouter le jambon.", "Sauter le tout."],
-    "rating": 4.2
-  },
-  {
-    "id": 30,
-    "name": "Tiramisu",
-    "type": "dessert",
-    "cuisine": "Italienne",
-    "difficulty": "Moyen",
-    "prepTime": 30,
-    "cookTime": 0,
-    "servings": 6,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Mascarpone", "quantity": 250, "unit": "g" },
-      { "name": "Biscuits à la cuillère", "quantity": 24, "unit": "pcs" }
-    ],
-    "steps": ["Préparer la crème.", "Monter le tiramisu.", "Réfrigérer."],
-    "rating": 4.9
-  },
-  {
-    "id": 31,
-    "name": "Soupe de potiron",
-    "type": "entrée",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 15,
-    "cookTime": 25,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Potiron", "quantity": 500, "unit": "g" },
-      { "name": "Crème", "quantity": 10, "unit": "cl" }
-    ],
-    "steps": ["Cuire le potiron.", "Mixer.", "Ajouter la crème."],
-    "rating": 4.4
-  },
-  {
-    "id": 32,
-    "name": "Paella",
-    "type": "plat",
-    "cuisine": "Espagnole",
-    "difficulty": "Difficile",
-    "prepTime": 40,
-    "cookTime": 60,
-    "servings": 8,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Riz", "quantity": 400, "unit": "g" },
-      { "name": "Fruits de mer", "quantity": 300, "unit": "g" }
-    ],
-    "steps": ["Cuire le riz.", "Ajouter les fruits de mer.", "Cuire ensemble."],
-    "rating": 4.7
-  },
-  {
-    "id": 33,
-    "name": "Baba au rhum",
-    "type": "dessert",
-    "cuisine": "Française",
-    "difficulty": "Moyen",
-    "prepTime": 20,
-    "cookTime": 25,
-    "servings": 6,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Farine", "quantity": 200, "unit": "g" },
-      { "name": "Rhum", "quantity": 5, "unit": "cl" }
-    ],
-    "steps": ["Préparer la pâte.", "Cuire au four.", "Imbiber de rhum."],
-    "rating": 4.5
-  },
-  {
-    "id": 34,
-    "name": "Gaufres",
-    "type": "dessert",
-    "cuisine": "Belge",
-    "difficulty": "Facile",
-    "prepTime": 15,
-    "cookTime": 20,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Farine", "quantity": 250, "unit": "g" },
-      { "name": "Lait", "quantity": 30, "unit": "cl" }
-    ],
-    "steps": ["Préparer la pâte.", "Cuire dans le gaufrier.", "Servir."],
-    "rating": 4.8
-  },
-  {
-    "id": 35,
-    "name": "Soupe pho",
-    "type": "plat",
-    "cuisine": "Vietnamienne",
-    "difficulty": "Difficile",
-    "prepTime": 30,
-    "cookTime": 120,
-    "servings": 6,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Bouillon", "quantity": 2, "unit": "l" },
-      { "name": "Nouilles de riz", "quantity": 300, "unit": "g" }
-    ],
-    "steps": [
-      "Préparer le bouillon.",
-      "Cuire les nouilles.",
-      "Assembler la soupe."
-    ],
-    "rating": 4.6
-  },
-  {
-    "id": 36,
-    "name": "Omelette",
-    "type": "plat",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 5,
-    "cookTime": 5,
-    "servings": 2,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Oeufs", "quantity": 4, "unit": "pcs" },
-      { "name": "Lait", "quantity": 5, "unit": "cl" }
-    ],
-    "steps": ["Battre les oeufs.", "Cuire à la poêle.", "Servir."],
-    "rating": 4.3
-  },
-  {
-    "id": 37,
-    "name": "Gratin dauphinois",
-    "type": "plat",
-    "cuisine": "Française",
-    "difficulty": "Moyen",
-    "prepTime": 20,
-    "cookTime": 60,
-    "servings": 6,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Pommes de terre", "quantity": 1, "unit": "kg" },
-      { "name": "Crème", "quantity": 25, "unit": "cl" }
-    ],
-    "steps": [
-      "Couper les pommes de terre.",
-      "Monter le gratin.",
-      "Cuire au four."
-    ],
-    "rating": 4.7
-  },
-  {
-    "id": 38,
-    "name": "Boeuf Stroganoff",
-    "type": "plat",
-    "cuisine": "Russe",
-    "difficulty": "Moyen",
-    "prepTime": 25,
-    "cookTime": 35,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Boeuf", "quantity": 500, "unit": "g" },
-      { "name": "Crème", "quantity": 20, "unit": "cl" }
-    ],
-    "steps": ["Cuire le boeuf.", "Ajouter la crème.", "Servir avec des pâtes."],
-    "rating": 4.4
-  },
-  {
-    "id": 39,
-    "name": "Rouleaux de printemps",
-    "type": "entrée",
-    "cuisine": "Vietnamienne",
-    "difficulty": "Moyen",
-    "prepTime": 30,
-    "cookTime": 0,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Galettes de riz", "quantity": 8, "unit": "pcs" },
-      { "name": "Crevettes", "quantity": 100, "unit": "g" }
-    ],
-    "steps": [
-      "Préparer les ingrédients.",
-      "Rouler les galettes.",
-      "Servir frais."
-    ],
-    "rating": 4.5
-  },
-  {
-    "id": 40,
-    "name": "Brownies",
-    "type": "dessert",
-    "cuisine": "Américaine",
-    "difficulty": "Facile",
-    "prepTime": 15,
-    "cookTime": 25,
-    "servings": 8,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Chocolat", "quantity": 200, "unit": "g" },
-      { "name": "Beurre", "quantity": 100, "unit": "g" }
-    ],
-    "steps": [
-      "Faire fondre le chocolat.",
-      "Mélanger les ingrédients.",
-      "Cuire au four."
-    ],
-    "rating": 4.8
-  },
-  {
-    "id": 41,
-    "name": "Soupe de lentilles",
-    "type": "entrée",
-    "cuisine": "Indienne",
-    "difficulty": "Facile",
-    "prepTime": 15,
-    "cookTime": 30,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Lentilles", "quantity": 200, "unit": "g" },
-      { "name": "Carottes", "quantity": 2, "unit": "pcs" }
-    ],
-    "steps": ["Cuire les lentilles.", "Ajouter les légumes.", "Assaisonner."],
-    "rating": 4.2
-  },
-  {
-    "id": 42,
-    "name": "Poulet tikka masala",
-    "type": "plat",
-    "cuisine": "Indienne",
-    "difficulty": "Moyen",
-    "prepTime": 20,
-    "cookTime": 30,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Poulet", "quantity": 600, "unit": "g" },
-      { "name": "Yaourt", "quantity": 10, "unit": "cl" }
-    ],
-    "steps": [
-      "Mariner le poulet.",
-      "Cuire avec la sauce.",
-      "Servir avec du riz."
-    ],
-    "rating": 4.7
-  },
-  {
-    "id": 43,
-    "name": "Pâtes carbonara",
-    "type": "plat",
-    "cuisine": "Italienne",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 15,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Pâtes", "quantity": 400, "unit": "g" },
-      { "name": "Lardons", "quantity": 100, "unit": "g" }
-    ],
-    "steps": [
-      "Cuire les pâtes.",
-      "Ajouter les lardons.",
-      "Mélanger avec la sauce."
-    ],
-    "rating": 4.6
-  },
-  {
-    "id": 44,
-    "name": "Soupe de poisson",
-    "type": "entrée",
-    "cuisine": "Française",
-    "difficulty": "Moyen",
-    "prepTime": 25,
-    "cookTime": 40,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Poisson blanc", "quantity": 400, "unit": "g" },
-      { "name": "Tomates", "quantity": 2, "unit": "pcs" }
-    ],
-    "steps": ["Cuire le poisson.", "Ajouter les tomates.", "Mixer le tout."],
-    "rating": 4.3
-  },
-  {
-    "id": 45,
-    "name": "Clafoutis aux cerises",
-    "type": "dessert",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 15,
-    "cookTime": 35,
-    "servings": 6,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Cerises", "quantity": 400, "unit": "g" },
-      { "name": "Farine", "quantity": 100, "unit": "g" }
-    ],
-    "steps": ["Préparer la pâte.", "Ajouter les cerises.", "Cuire au four."],
-    "rating": 4.5
-  },
-  {
-    "id": 46,
-    "name": "Blinis",
-    "type": "entrée",
-    "cuisine": "Russe",
-    "difficulty": "Moyen",
-    "prepTime": 20,
-    "cookTime": 15,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Farine", "quantity": 150, "unit": "g" },
-      { "name": "Lait", "quantity": 20, "unit": "cl" }
-    ],
-    "steps": ["Préparer la pâte.", "Cuire les blinis.", "Servir."],
-    "rating": 4.2
-  },
-  {
-    "id": 47,
-    "name": "Poulet rôti",
-    "type": "plat",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 60,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Poulet entier", "quantity": 1, "unit": "pcs" },
-      { "name": "Pommes de terre", "quantity": 500, "unit": "g" }
-    ],
-    "steps": [
-      "Préparer le poulet.",
-      "Cuire au four.",
-      "Servir avec pommes de terre."
-    ],
-    "rating": 4.8
-  },
-  {
-    "id": 48,
-    "name": "Salade de quinoa",
-    "type": "entrée",
-    "cuisine": "Internationale",
-    "difficulty": "Facile",
-    "prepTime": 15,
-    "cookTime": 15,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Quinoa", "quantity": 200, "unit": "g" },
-      { "name": "Légumes variés", "quantity": 200, "unit": "g" }
-    ],
-    "steps": ["Cuire le quinoa.", "Ajouter les légumes.", "Assaisonner."],
-    "rating": 4.3
-  },
-  {
-    "id": 49,
-    "name": "Soupe de carottes",
-    "type": "entrée",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 20,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Carottes", "quantity": 500, "unit": "g" },
-      { "name": "Crème", "quantity": 10, "unit": "cl" }
-    ],
-    "steps": ["Cuire les carottes.", "Mixer.", "Ajouter la crème."],
-    "rating": 4.1
-  },
-  {
-    "id": 50,
-    "name": "Pâtes pesto",
-    "type": "plat",
-    "cuisine": "Italienne",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 15,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Pâtes", "quantity": 400, "unit": "g" },
-      { "name": "Pesto", "quantity": 100, "unit": "g" }
-    ],
-    "steps": ["Cuire les pâtes.", "Ajouter le pesto.", "Mélanger."],
-    "rating": 4.7
-  },
-  {
-    "id": 51,
-    "name": "Soupe de courgettes",
-    "type": "entrée",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 20,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Courgettes", "quantity": 3, "unit": "pcs" },
-      { "name": "Crème", "quantity": 10, "unit": "cl" }
-    ],
-    "steps": ["Cuire les courgettes.", "Mixer.", "Ajouter la crème."],
-    "rating": 4.2
-  },
-  {
-    "id": 52,
-    "name": "Tarte au chocolat",
-    "type": "dessert",
-    "cuisine": "Française",
-    "difficulty": "Moyen",
-    "prepTime": 20,
-    "cookTime": 25,
-    "servings": 6,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Pâte sablée", "quantity": 1, "unit": "pcs" },
-      { "name": "Chocolat", "quantity": 200, "unit": "g" }
-    ],
-    "steps": ["Préparer la pâte.", "Faire la ganache.", "Cuire au four."],
-    "rating": 4.8
-  },
-  {
-    "id": 53,
-    "name": "Salade niçoise",
-    "type": "entrée",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 15,
-    "cookTime": 0,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Tomates", "quantity": 2, "unit": "pcs" },
-      { "name": "Thon", "quantity": 100, "unit": "g" }
-    ],
-    "steps": ["Préparer les légumes.", "Ajouter le thon.", "Assaisonner."],
-    "rating": 4.4
-  },
-  {
-    "id": 54,
-    "name": "Poulet curry coco",
-    "type": "plat",
-    "cuisine": "Indienne",
-    "difficulty": "Facile",
-    "prepTime": 15,
-    "cookTime": 25,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Poulet", "quantity": 600, "unit": "g" },
-      { "name": "Lait de coco", "quantity": 20, "unit": "cl" }
-    ],
-    "steps": ["Cuire le poulet.", "Ajouter le lait de coco.", "Assaisonner."],
-    "rating": 4.6
-  },
-  {
-    "id": 55,
-    "name": "Soupe de tomates",
-    "type": "entrée",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 20,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Tomates", "quantity": 5, "unit": "pcs" },
-      { "name": "Oignon", "quantity": 1, "unit": "pcs" }
-    ],
-    "steps": ["Cuire les tomates.", "Mixer.", "Assaisonner."],
-    "rating": 4.1
-  },
-  {
-    "id": 56,
-    "name": "Pâtes bolognaise",
-    "type": "plat",
-    "cuisine": "Italienne",
-    "difficulty": "Facile",
-    "prepTime": 15,
-    "cookTime": 30,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Pâtes", "quantity": 400, "unit": "g" },
-      { "name": "Viande hachée", "quantity": 200, "unit": "g" }
-    ],
-    "steps": ["Cuire les pâtes.", "Préparer la sauce.", "Mélanger."],
-    "rating": 4.7
-  },
-  {
-    "id": 57,
-    "name": "Soupe de poireaux",
-    "type": "entrée",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 20,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Poireaux", "quantity": 3, "unit": "pcs" },
-      { "name": "Pommes de terre", "quantity": 2, "unit": "pcs" }
-    ],
-    "steps": ["Cuire les légumes.", "Mixer.", "Assaisonner."],
-    "rating": 4.2
-  },
-  {
-    "id": 58,
-    "name": "Tarte aux fraises",
-    "type": "dessert",
-    "cuisine": "Française",
-    "difficulty": "Moyen",
-    "prepTime": 20,
-    "cookTime": 25,
-    "servings": 6,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Pâte sablée", "quantity": 1, "unit": "pcs" },
-      { "name": "Fraises", "quantity": 300, "unit": "g" }
-    ],
-    "steps": ["Préparer la pâte.", "Disposer les fraises.", "Cuire au four."],
-    "rating": 4.8
-  },
-  {
-    "id": 59,
-    "name": "Soupe de pois cassés",
-    "type": "entrée",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 15,
-    "cookTime": 40,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Pois cassés", "quantity": 200, "unit": "g" },
-      { "name": "Carottes", "quantity": 2, "unit": "pcs" }
-    ],
-    "steps": ["Cuire les pois cassés.", "Ajouter les carottes.", "Mixer."],
-    "rating": 4.3
-  },
-  {
-    "id": 60,
-    "name": "Pâtes aux légumes",
-    "type": "plat",
-    "cuisine": "Italienne",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 15,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Pâtes", "quantity": 400, "unit": "g" },
-      { "name": "Légumes variés", "quantity": 200, "unit": "g" }
-    ],
-    "steps": ["Cuire les pâtes.", "Ajouter les légumes.", "Mélanger."],
-    "rating": 4.4
-  },
-  {
-    "id": 61,
-    "name": "Soupe de brocolis",
-    "type": "entrée",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 20,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Brocolis", "quantity": 1, "unit": "pcs" },
-      { "name": "Crème", "quantity": 10, "unit": "cl" }
-    ],
-    "steps": ["Cuire les brocolis.", "Mixer.", "Ajouter la crème."],
-    "rating": 4.2
-  },
-  {
-    "id": 62,
-    "name": "Salade de pâtes",
-    "type": "entrée",
-    "cuisine": "Italienne",
-    "difficulty": "Facile",
-    "prepTime": 15,
-    "cookTime": 10,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Pâtes", "quantity": 200, "unit": "g" },
-      { "name": "Légumes variés", "quantity": 150, "unit": "g" }
-    ],
-    "steps": ["Cuire les pâtes.", "Ajouter les légumes.", "Assaisonner."],
-    "rating": 4.3
-  },
-  {
-    "id": 63,
-    "name": "Soupe de champignons",
-    "type": "entrée",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 20,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Champignons", "quantity": 300, "unit": "g" },
-      { "name": "Crème", "quantity": 10, "unit": "cl" }
-    ],
-    "steps": ["Cuire les champignons.", "Mixer.", "Ajouter la crème."],
-    "rating": 4.4
-  },
-  {
-    "id": 64,
-    "name": "Soupe de courge",
-    "type": "entrée",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 20,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Courge", "quantity": 500, "unit": "g" },
-      { "name": "Crème", "quantity": 10, "unit": "cl" }
-    ],
-    "steps": ["Cuire la courge.", "Mixer.", "Ajouter la crème."],
-    "rating": 4.2
-  },
-  {
-    "id": 65,
-    "name": "Soupe de patate douce",
-    "type": "entrée",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 20,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Patate douce", "quantity": 500, "unit": "g" },
-      { "name": "Crème", "quantity": 10, "unit": "cl" }
-    ],
-    "steps": ["Cuire la patate douce.", "Mixer.", "Ajouter la crème."],
-    "rating": 4.3
-  },
-  {
-    "id": 66,
-    "name": "Soupe de pois chiches",
-    "type": "entrée",
-    "cuisine": "Moyen-Orient",
-    "difficulty": "Facile",
-    "prepTime": 15,
-    "cookTime": 30,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Pois chiches", "quantity": 200, "unit": "g" },
-      { "name": "Carottes", "quantity": 2, "unit": "pcs" }
-    ],
-    "steps": ["Cuire les pois chiches.", "Ajouter les carottes.", "Mixer."],
-    "rating": 4.2
-  },
-  {
-    "id": 67,
-    "name": "Soupe de navets",
-    "type": "entrée",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 20,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Navets", "quantity": 400, "unit": "g" },
-      { "name": "Crème", "quantity": 10, "unit": "cl" }
-    ],
-    "steps": ["Cuire les navets.", "Mixer.", "Ajouter la crème."],
-    "rating": 4.1
-  },
-  {
-    "id": 68,
-    "name": "Soupe de céleri",
-    "type": "entrée",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 20,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Céleri", "quantity": 400, "unit": "g" },
-      { "name": "Crème", "quantity": 10, "unit": "cl" }
-    ],
-    "steps": ["Cuire le céleri.", "Mixer.", "Ajouter la crème."],
-    "rating": 4.2
-  },
-  {
-    "id": 69,
-    "name": "Soupe de fenouil",
-    "type": "entrée",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 20,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Fenouil", "quantity": 400, "unit": "g" },
-      { "name": "Crème", "quantity": 10, "unit": "cl" }
-    ],
-    "steps": ["Cuire le fenouil.", "Mixer.", "Ajouter la crème."],
-    "rating": 4.1
-  },
-  {
-    "id": 70,
-    "name": "Soupe de poivrons",
-    "type": "entrée",
-    "cuisine": "Française",
-    "difficulty": "Facile",
-    "prepTime": 10,
-    "cookTime": 20,
-    "servings": 4,
-    "image": "url...",
-    "ingredients": [
-      { "name": "Poivrons", "quantity": 400, "unit": "g" },
-      { "name": "Crème", "quantity": 10, "unit": "cl" }
-    ],
-    "steps": ["Cuire les poivrons.", "Mixer.", "Ajouter la crème."],
-    "rating": 4.2
-  }
+	{
+		"id": 1,
+		"name": "Risotto aux champignons",
+		"type": "plat",
+		"cuisine": "Italienne",
+		"difficulty": "Moyen",
+		"prepTime": 15,
+		"cookTime": 30,
+		"Time": 45,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Riz arborio", "quantity": 300, "unit": "g" },
+			{ "name": "Champignons", "quantity": 250, "unit": "g" }
+		],
+		"steps": [
+			"Faire revenir les champignons.",
+			"Ajouter le riz.",
+			"Cuire avec du bouillon."
+		],
+		"rating": 4.5
+	},
+	{
+		"id": 2,
+		"name": "Poulet basquaise",
+		"type": "plat",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 20,
+		"cookTime": 40,
+		"Time": 60,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Poulet", "quantity": 800, "unit": "g" },
+			{ "name": "Poivrons", "quantity": 2, "unit": "pcs" }
+		],
+		"steps": [
+			"Faire revenir le poulet.",
+			"Ajouter les poivrons.",
+			"Laisser mijoter."
+		],
+		"rating": 4.2
+	},
+	{
+		"id": 3,
+		"name": "Tacos végétariens",
+		"type": "plat",
+		"cuisine": "Mexicaine",
+		"difficulty": "Facile",
+		"prepTime": 15,
+		"cookTime": 10,
+		"Time": 25,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Tortillas", "quantity": 8, "unit": "pcs" },
+			{ "name": "Haricots rouges", "quantity": 400, "unit": "g" }
+		],
+		"steps": [
+			"Chauffer les tortillas.",
+			"Préparer la garniture.",
+			"Assembler les tacos."
+		],
+		"rating": 4.0
+	},
+	{
+		"id": 4,
+		"name": "Pad Thaï",
+		"type": "plat",
+		"cuisine": "Thaïlandaise",
+		"difficulty": "Moyen",
+		"prepTime": 20,
+		"cookTime": 15,
+		"Time": 35,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Nouilles de riz", "quantity": 250, "unit": "g" },
+			{ "name": "Crevettes", "quantity": 200, "unit": "g" }
+		],
+		"steps": [
+			"Cuire les nouilles.",
+			"Sauter les crevettes.",
+			"Mélanger avec la sauce."
+		],
+		"rating": 4.6
+	},
+	{
+		"id": 5,
+		"name": "Soupe miso",
+		"type": "entrée",
+		"cuisine": "Japonaise",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 10,
+		"Time": 20,
+		"servings": 2,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Pâte miso", "quantity": 2, "unit": "càs" },
+			{ "name": "Tofu", "quantity": 100, "unit": "g" }
+		],
+		"steps": [
+			"Faire chauffer l'eau.",
+			"Ajouter la pâte miso.",
+			"Incorporer le tofu."
+		],
+		"rating": 4.3
+	},
+	{
+		"id": 6,
+		"name": "Salade César",
+		"type": "entrée",
+		"cuisine": "Américaine",
+		"difficulty": "Facile",
+		"prepTime": 15,
+		"cookTime": 0,
+		"Time": 15,
+		"servings": 2,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Laitue romaine", "quantity": 1, "unit": "pcs" },
+			{ "name": "Poulet grillé", "quantity": 100, "unit": "g" }
+		],
+		"steps": ["Préparer la salade.", "Ajouter le poulet.", "Assaisonner."],
+		"rating": 4.4
+	},
+	{
+		"id": 7,
+		"name": "Quiche lorraine",
+		"type": "plat",
+		"cuisine": "Française",
+		"difficulty": "Moyen",
+		"prepTime": 20,
+		"cookTime": 35,
+		"Time": 55,
+		"servings": 6,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Pâte brisée", "quantity": 1, "unit": "pcs" },
+			{ "name": "Lardons", "quantity": 150, "unit": "g" }
+		],
+		"steps": ["Préparer la pâte.", "Ajouter la garniture.", "Cuire au four."],
+		"rating": 4.7
+	},
+	{
+		"id": 8,
+		"name": "Curry de légumes",
+		"type": "plat",
+		"cuisine": "Indienne",
+		"difficulty": "Moyen",
+		"prepTime": 25,
+		"cookTime": 30,
+		"Time": 55,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Pommes de terre", "quantity": 300, "unit": "g" },
+			{ "name": "Carottes", "quantity": 200, "unit": "g" }
+		],
+		"steps": [
+			"Faire revenir les légumes.",
+			"Ajouter les épices.",
+			"Laisser mijoter."
+		],
+		"rating": 4.1
+	},
+	{
+		"id": 9,
+		"name": "Pizza Margherita",
+		"type": "plat",
+		"cuisine": "Italienne",
+		"difficulty": "Facile",
+		"prepTime": 15,
+		"cookTime": 20,
+		"Time": 35,
+		"servings": 2,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Pâte à pizza", "quantity": 1, "unit": "pcs" },
+			{ "name": "Mozzarella", "quantity": 125, "unit": "g" }
+		],
+		"steps": ["Étaler la pâte.", "Ajouter la garniture.", "Cuire au four."],
+		"rating": 4.8
+	},
+	{
+		"id": 10,
+		"name": "Falafels",
+		"type": "plat",
+		"cuisine": "Moyen-Orient",
+		"difficulty": "Moyen",
+		"prepTime": 30,
+		"cookTime": 10,
+		"Time": 40,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Pois chiches", "quantity": 250, "unit": "g" },
+			{ "name": "Oignon", "quantity": 1, "unit": "pcs" }
+		],
+		"steps": [
+			"Mixer les ingrédients.",
+			"Former des boulettes.",
+			"Frire les falafels."
+		],
+		"rating": 4.5
+	},
+	{
+		"id": 11,
+		"name": "Boeuf bourguignon",
+		"type": "plat",
+		"cuisine": "Française",
+		"difficulty": "Difficile",
+		"prepTime": 30,
+		"cookTime": 180,
+		"Time": 210,
+		"servings": 6,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Boeuf", "quantity": 1, "unit": "kg" },
+			{ "name": "Vin rouge", "quantity": 75, "unit": "cl" }
+		],
+		"steps": [
+			"Faire revenir le boeuf.",
+			"Ajouter le vin.",
+			"Cuire longuement."
+		],
+		"rating": 4.9
+	},
+	{
+		"id": 12,
+		"name": "Taboulé",
+		"type": "entrée",
+		"cuisine": "Libanaise",
+		"difficulty": "Facile",
+		"prepTime": 20,
+		"cookTime": 0,
+		"Time": 20,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Boulgour", "quantity": 200, "unit": "g" },
+			{ "name": "Tomates", "quantity": 3, "unit": "pcs" }
+		],
+		"steps": [
+			"Préparer les légumes.",
+			"Mélanger avec le boulgour.",
+			"Assaisonner."
+		],
+		"rating": 4.2
+	},
+	{
+		"id": 13,
+		"name": "Ratatouille",
+		"type": "plat",
+		"cuisine": "Française",
+		"difficulty": "Moyen",
+		"prepTime": 25,
+		"cookTime": 40,
+		"Time": 65,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Aubergine", "quantity": 1, "unit": "pcs" },
+			{ "name": "Courgette", "quantity": 2, "unit": "pcs" }
+		],
+		"steps": ["Couper les légumes.", "Faire revenir.", "Laisser mijoter."],
+		"rating": 4.3
+	},
+	{
+		"id": 14,
+		"name": "Sushi",
+		"type": "plat",
+		"cuisine": "Japonaise",
+		"difficulty": "Difficile",
+		"prepTime": 40,
+		"cookTime": 20,
+		"Time": 60,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Riz à sushi", "quantity": 300, "unit": "g" },
+			{ "name": "Saumon", "quantity": 200, "unit": "g" }
+		],
+		"steps": ["Cuire le riz.", "Préparer le poisson.", "Rouler les sushis."],
+		"rating": 4.7
+	},
+	{
+		"id": 15,
+		"name": "Tarte aux pommes",
+		"type": "dessert",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 20,
+		"cookTime": 35,
+		"Time": 55,
+		"servings": 6,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Pâte feuilletée", "quantity": 1, "unit": "pcs" },
+			{ "name": "Pommes", "quantity": 4, "unit": "pcs" }
+		],
+		"steps": ["Étaler la pâte.", "Disposer les pommes.", "Cuire au four."],
+		"rating": 4.6
+	},
+	{
+		"id": 16,
+		"name": "Gaspacho",
+		"type": "entrée",
+		"cuisine": "Espagnole",
+		"difficulty": "Facile",
+		"prepTime": 15,
+		"cookTime": 0,
+		"Time": 15,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Tomates", "quantity": 5, "unit": "pcs" },
+			{ "name": "Concombre", "quantity": 1, "unit": "pcs" }
+		],
+		"steps": ["Mixer les légumes.", "Assaisonner.", "Servir frais."],
+		"rating": 4.2
+	},
+	{
+		"id": 17,
+		"name": "Chili sin carne",
+		"type": "plat",
+		"cuisine": "Mexicaine",
+		"difficulty": "Facile",
+		"prepTime": 20,
+		"cookTime": 30,
+		"Time": 50,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Haricots rouges", "quantity": 400, "unit": "g" },
+			{ "name": "Maïs", "quantity": 150, "unit": "g" }
+		],
+		"steps": [
+			"Faire revenir les légumes.",
+			"Ajouter les haricots.",
+			"Laisser mijoter."
+		],
+		"rating": 4.1
+	},
+	{
+		"id": 18,
+		"name": "Lasagnes",
+		"type": "plat",
+		"cuisine": "Italienne",
+		"difficulty": "Moyen",
+		"prepTime": 30,
+		"cookTime": 45,
+		"Time": 75,
+		"servings": 6,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Pâtes à lasagne", "quantity": 9, "unit": "pcs" },
+			{ "name": "Viande hachée", "quantity": 400, "unit": "g" }
+		],
+		"steps": ["Préparer la sauce.", "Monter les lasagnes.", "Cuire au four."],
+		"rating": 4.8
+	},
+	{
+		"id": 19,
+		"name": "Soupe à l'oignon",
+		"type": "entrée",
+		"cuisine": "Française",
+		"difficulty": "Moyen",
+		"prepTime": 20,
+		"cookTime": 40,
+		"Time": 60,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Oignons", "quantity": 4, "unit": "pcs" },
+			{ "name": "Bouillon", "quantity": 1, "unit": "l" }
+		],
+		"steps": [
+			"Faire revenir les oignons.",
+			"Ajouter le bouillon.",
+			"Cuire doucement."
+		],
+		"rating": 4.5
+	},
+	{
+		"id": 20,
+		"name": "Crêpes",
+		"type": "dessert",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 20,
+		"Time": 30,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Farine", "quantity": 250, "unit": "g" },
+			{ "name": "Lait", "quantity": 50, "unit": "cl" }
+		],
+		"steps": ["Préparer la pâte.", "Cuire les crêpes.", "Servir."],
+		"rating": 4.9
+	},
+	{
+		"id": 21,
+		"name": "Tajine de poulet",
+		"type": "plat",
+		"cuisine": "Marocaine",
+		"difficulty": "Moyen",
+		"prepTime": 25,
+		"cookTime": 60,
+		"Time": 85,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Poulet", "quantity": 800, "unit": "g" },
+			{ "name": "Abricots secs", "quantity": 100, "unit": "g" }
+		],
+		"steps": [
+			"Faire revenir le poulet.",
+			"Ajouter les abricots.",
+			"Laisser mijoter."
+		],
+		"rating": 4.6
+	},
+	{
+		"id": 22,
+		"name": "Biryani végétarien",
+		"type": "plat",
+		"cuisine": "Indienne",
+		"difficulty": "Difficile",
+		"prepTime": 35,
+		"cookTime": 45,
+		"Time": 80,
+		"servings": 6,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Riz basmati", "quantity": 400, "unit": "g" },
+			{ "name": "Légumes variés", "quantity": 300, "unit": "g" }
+		],
+		"steps": ["Cuire le riz.", "Préparer les légumes.", "Assembler et cuire."],
+		"rating": 4.4
+	},
+	{
+		"id": 23,
+		"name": "Moussaka",
+		"type": "plat",
+		"cuisine": "Grecque",
+		"difficulty": "Difficile",
+		"prepTime": 40,
+		"cookTime": 60,
+		"Time": 100,
+		"servings": 6,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Aubergines", "quantity": 2, "unit": "pcs" },
+			{ "name": "Viande hachée", "quantity": 400, "unit": "g" }
+		],
+		"steps": [
+			"Préparer les aubergines.",
+			"Cuire la viande.",
+			"Monter la moussaka."
+		],
+		"rating": 4.3
+	},
+	{
+		"id": 24,
+		"name": "Pancakes",
+		"type": "dessert",
+		"cuisine": "Américaine",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 15,
+		"Time": 25,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Farine", "quantity": 200, "unit": "g" },
+			{ "name": "Lait", "quantity": 30, "unit": "cl" }
+		],
+		"steps": ["Préparer la pâte.", "Cuire les pancakes.", "Servir."],
+		"rating": 4.7
+	},
+	{
+		"id": 25,
+		"name": "Bouillabaisse",
+		"type": "plat",
+		"cuisine": "Française",
+		"difficulty": "Difficile",
+		"prepTime": 45,
+		"cookTime": 60,
+		"Time": 105,
+		"servings": 6,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Poisson blanc", "quantity": 600, "unit": "g" },
+			{ "name": "Fruits de mer", "quantity": 300, "unit": "g" }
+		],
+		"steps": [
+			"Préparer le bouillon.",
+			"Ajouter le poisson.",
+			"Cuire doucement."
+		],
+		"rating": 4.5
+	},
+	{
+		"id": 26,
+		"name": "Salade grecque",
+		"type": "entrée",
+		"cuisine": "Grecque",
+		"difficulty": "Facile",
+		"prepTime": 15,
+		"cookTime": 0,
+		"Time": 15,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Concombre", "quantity": 1, "unit": "pcs" },
+			{ "name": "Feta", "quantity": 100, "unit": "g" }
+		],
+		"steps": ["Couper les légumes.", "Ajouter la feta.", "Assaisonner."],
+		"rating": 4.3
+	},
+	{
+		"id": 27,
+		"name": "Couscous",
+		"type": "plat",
+		"cuisine": "Maghrébine",
+		"difficulty": "Moyen",
+		"prepTime": 30,
+		"cookTime": 60,
+		"Time": 90,
+		"servings": 6,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Semoule", "quantity": 400, "unit": "g" },
+			{ "name": "Légumes variés", "quantity": 400, "unit": "g" }
+		],
+		"steps": [
+			"Préparer la semoule.",
+			"Cuire les légumes.",
+			"Assembler le couscous."
+		],
+		"rating": 4.6
+	},
+	{
+		"id": 28,
+		"name": "Tarte au citron",
+		"type": "dessert",
+		"cuisine": "Française",
+		"difficulty": "Moyen",
+		"prepTime": 25,
+		"cookTime": 30,
+		"Time": 55,
+		"servings": 6,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Pâte sablée", "quantity": 1, "unit": "pcs" },
+			{ "name": "Citrons", "quantity": 3, "unit": "pcs" }
+		],
+		"steps": ["Préparer la pâte.", "Faire la crème citron.", "Cuire au four."],
+		"rating": 4.8
+	},
+	{
+		"id": 29,
+		"name": "Riz cantonais",
+		"type": "plat",
+		"cuisine": "Chinoise",
+		"difficulty": "Facile",
+		"prepTime": 15,
+		"cookTime": 20,
+		"Time": 35,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Riz", "quantity": 250, "unit": "g" },
+			{ "name": "Jambon", "quantity": 100, "unit": "g" }
+		],
+		"steps": ["Cuire le riz.", "Ajouter le jambon.", "Sauter le tout."],
+		"rating": 4.2
+	},
+	{
+		"id": 30,
+		"name": "Tiramisu",
+		"type": "dessert",
+		"cuisine": "Italienne",
+		"difficulty": "Moyen",
+		"prepTime": 30,
+		"cookTime": 0,
+		"Time": 30,
+		"servings": 6,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Mascarpone", "quantity": 250, "unit": "g" },
+			{ "name": "Biscuits à la cuillère", "quantity": 24, "unit": "pcs" }
+		],
+		"steps": ["Préparer la crème.", "Monter le tiramisu.", "Réfrigérer."],
+		"rating": 4.9
+	},
+	{
+		"id": 31,
+		"name": "Soupe de potiron",
+		"type": "entrée",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 15,
+		"cookTime": 25,
+		"Time": 40,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Potiron", "quantity": 500, "unit": "g" },
+			{ "name": "Crème", "quantity": 10, "unit": "cl" }
+		],
+		"steps": ["Cuire le potiron.", "Mixer.", "Ajouter la crème."],
+		"rating": 4.4
+	},
+	{
+		"id": 32,
+		"name": "Paella",
+		"type": "plat",
+		"cuisine": "Espagnole",
+		"difficulty": "Difficile",
+		"prepTime": 40,
+		"cookTime": 60,
+		"Time": 100,
+		"servings": 8,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Riz", "quantity": 400, "unit": "g" },
+			{ "name": "Fruits de mer", "quantity": 300, "unit": "g" }
+		],
+		"steps": ["Cuire le riz.", "Ajouter les fruits de mer.", "Cuire ensemble."],
+		"rating": 4.7
+	},
+	{
+		"id": 33,
+		"name": "Baba au rhum",
+		"type": "dessert",
+		"cuisine": "Française",
+		"difficulty": "Moyen",
+		"prepTime": 20,
+		"cookTime": 25,
+		"Time": 45,
+		"servings": 6,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Farine", "quantity": 200, "unit": "g" },
+			{ "name": "Rhum", "quantity": 5, "unit": "cl" }
+		],
+		"steps": ["Préparer la pâte.", "Cuire au four.", "Imbiber de rhum."],
+		"rating": 4.5
+	},
+	{
+		"id": 34,
+		"name": "Gaufres",
+		"type": "dessert",
+		"cuisine": "Belge",
+		"difficulty": "Facile",
+		"prepTime": 15,
+		"cookTime": 20,
+		"Time": 35,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Farine", "quantity": 250, "unit": "g" },
+			{ "name": "Lait", "quantity": 30, "unit": "cl" }
+		],
+		"steps": ["Préparer la pâte.", "Cuire dans le gaufrier.", "Servir."],
+		"rating": 4.8
+	},
+	{
+		"id": 35,
+		"name": "Soupe pho",
+		"type": "plat",
+		"cuisine": "Vietnamienne",
+		"difficulty": "Difficile",
+		"prepTime": 30,
+		"cookTime": 120,
+		"Time": 150,
+		"servings": 6,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Bouillon", "quantity": 2, "unit": "l" },
+			{ "name": "Nouilles de riz", "quantity": 300, "unit": "g" }
+		],
+		"steps": [
+			"Préparer le bouillon.",
+			"Cuire les nouilles.",
+			"Assembler la soupe."
+		],
+		"rating": 4.6
+	},
+	{
+		"id": 36,
+		"name": "Omelette",
+		"type": "plat",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 5,
+		"cookTime": 5,
+		"Time": 10,
+		"servings": 2,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Oeufs", "quantity": 4, "unit": "pcs" },
+			{ "name": "Lait", "quantity": 5, "unit": "cl" }
+		],
+		"steps": ["Battre les oeufs.", "Cuire à la poêle.", "Servir."],
+		"rating": 4.3
+	},
+	{
+		"id": 37,
+		"name": "Gratin dauphinois",
+		"type": "plat",
+		"cuisine": "Française",
+		"difficulty": "Moyen",
+		"prepTime": 20,
+		"cookTime": 60,
+		"Time": 80,
+		"servings": 6,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Pommes de terre", "quantity": 1, "unit": "kg" },
+			{ "name": "Crème", "quantity": 25, "unit": "cl" }
+		],
+		"steps": [
+			"Couper les pommes de terre.",
+			"Monter le gratin.",
+			"Cuire au four."
+		],
+		"rating": 4.7
+	},
+	{
+		"id": 38,
+		"name": "Boeuf Stroganoff",
+		"type": "plat",
+		"cuisine": "Russe",
+		"difficulty": "Moyen",
+		"prepTime": 25,
+		"cookTime": 35,
+		"Time": 60,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Boeuf", "quantity": 500, "unit": "g" },
+			{ "name": "Crème", "quantity": 20, "unit": "cl" }
+		],
+		"steps": ["Cuire le boeuf.", "Ajouter la crème.", "Servir avec des pâtes."],
+		"rating": 4.4
+	},
+	{
+		"id": 39,
+		"name": "Rouleaux de printemps",
+		"type": "entrée",
+		"cuisine": "Vietnamienne",
+		"difficulty": "Moyen",
+		"prepTime": 30,
+		"cookTime": 0,
+		"Time": 30,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Galettes de riz", "quantity": 8, "unit": "pcs" },
+			{ "name": "Crevettes", "quantity": 100, "unit": "g" }
+		],
+		"steps": [
+			"Préparer les ingrédients.",
+			"Rouler les galettes.",
+			"Servir frais."
+		],
+		"rating": 4.5
+	},
+	{
+		"id": 40,
+		"name": "Brownies",
+		"type": "dessert",
+		"cuisine": "Américaine",
+		"difficulty": "Facile",
+		"prepTime": 15,
+		"cookTime": 25,
+		"Time": 40,
+		"servings": 8,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Chocolat", "quantity": 200, "unit": "g" },
+			{ "name": "Beurre", "quantity": 100, "unit": "g" }
+		],
+		"steps": [
+			"Faire fondre le chocolat.",
+			"Mélanger les ingrédients.",
+			"Cuire au four."
+		],
+		"rating": 4.8
+	},
+	{
+		"id": 41,
+		"name": "Soupe de lentilles",
+		"type": "entrée",
+		"cuisine": "Indienne",
+		"difficulty": "Facile",
+		"prepTime": 15,
+		"cookTime": 30,
+		"Time": 45,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Lentilles", "quantity": 200, "unit": "g" },
+			{ "name": "Carottes", "quantity": 2, "unit": "pcs" }
+		],
+		"steps": ["Cuire les lentilles.", "Ajouter les légumes.", "Assaisonner."],
+		"rating": 4.2
+	},
+	{
+		"id": 42,
+		"name": "Poulet tikka masala",
+		"type": "plat",
+		"cuisine": "Indienne",
+		"difficulty": "Moyen",
+		"prepTime": 20,
+		"cookTime": 30,
+		"Time": 50,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Poulet", "quantity": 600, "unit": "g" },
+			{ "name": "Yaourt", "quantity": 10, "unit": "cl" }
+		],
+		"steps": [
+			"Mariner le poulet.",
+			"Cuire avec la sauce.",
+			"Servir avec du riz."
+		],
+		"rating": 4.7
+	},
+	{
+		"id": 43,
+		"name": "Pâtes carbonara",
+		"type": "plat",
+		"cuisine": "Italienne",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 15,
+		"Time": 25,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Pâtes", "quantity": 400, "unit": "g" },
+			{ "name": "Lardons", "quantity": 100, "unit": "g" }
+		],
+		"steps": [
+			"Cuire les pâtes.",
+			"Ajouter les lardons.",
+			"Mélanger avec la sauce."
+		],
+		"rating": 4.6
+	},
+	{
+		"id": 44,
+		"name": "Soupe de poisson",
+		"type": "entrée",
+		"cuisine": "Française",
+		"difficulty": "Moyen",
+		"prepTime": 25,
+		"cookTime": 40,
+		"Time": 65,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Poisson blanc", "quantity": 400, "unit": "g" },
+			{ "name": "Tomates", "quantity": 2, "unit": "pcs" }
+		],
+		"steps": ["Cuire le poisson.", "Ajouter les tomates.", "Mixer le tout."],
+		"rating": 4.3
+	},
+	{
+		"id": 45,
+		"name": "Clafoutis aux cerises",
+		"type": "dessert",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 15,
+		"cookTime": 35,
+		"Time": 50,
+		"servings": 6,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Cerises", "quantity": 400, "unit": "g" },
+			{ "name": "Farine", "quantity": 100, "unit": "g" }
+		],
+		"steps": ["Préparer la pâte.", "Ajouter les cerises.", "Cuire au four."],
+		"rating": 4.5
+	},
+	{
+		"id": 46,
+		"name": "Blinis",
+		"type": "entrée",
+		"cuisine": "Russe",
+		"difficulty": "Moyen",
+		"prepTime": 20,
+		"cookTime": 15,
+		"Time": 35,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Farine", "quantity": 150, "unit": "g" },
+			{ "name": "Lait", "quantity": 20, "unit": "cl" }
+		],
+		"steps": ["Préparer la pâte.", "Cuire les blinis.", "Servir."],
+		"rating": 4.2
+	},
+	{
+		"id": 47,
+		"name": "Poulet rôti",
+		"type": "plat",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 60,
+		"Time": 70,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Poulet entier", "quantity": 1, "unit": "pcs" },
+			{ "name": "Pommes de terre", "quantity": 500, "unit": "g" }
+		],
+		"steps": [
+			"Préparer le poulet.",
+			"Cuire au four.",
+			"Servir avec pommes de terre."
+		],
+		"rating": 4.8
+	},
+	{
+		"id": 48,
+		"name": "Salade de quinoa",
+		"type": "entrée",
+		"cuisine": "Internationale",
+		"difficulty": "Facile",
+		"prepTime": 15,
+		"cookTime": 15,
+		"Time": 30,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Quinoa", "quantity": 200, "unit": "g" },
+			{ "name": "Légumes variés", "quantity": 200, "unit": "g" }
+		],
+		"steps": ["Cuire le quinoa.", "Ajouter les légumes.", "Assaisonner."],
+		"rating": 4.3
+	},
+	{
+		"id": 49,
+		"name": "Soupe de carottes",
+		"type": "entrée",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 20,
+		"Time": 30,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Carottes", "quantity": 500, "unit": "g" },
+			{ "name": "Crème", "quantity": 10, "unit": "cl" }
+		],
+		"steps": ["Cuire les carottes.", "Mixer.", "Ajouter la crème."],
+		"rating": 4.1
+	},
+	{
+		"id": 50,
+		"name": "Pâtes pesto",
+		"type": "plat",
+		"cuisine": "Italienne",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 15,
+		"Time": 25,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Pâtes", "quantity": 400, "unit": "g" },
+			{ "name": "Pesto", "quantity": 100, "unit": "g" }
+		],
+		"steps": ["Cuire les pâtes.", "Ajouter le pesto.", "Mélanger."],
+		"rating": 4.7
+	},
+	{
+		"id": 51,
+		"name": "Soupe de courgettes",
+		"type": "entrée",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 20,
+		"Time": 30,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Courgettes", "quantity": 3, "unit": "pcs" },
+			{ "name": "Crème", "quantity": 10, "unit": "cl" }
+		],
+		"steps": ["Cuire les courgettes.", "Mixer.", "Ajouter la crème."],
+		"rating": 4.2
+	},
+	{
+		"id": 52,
+		"name": "Tarte au chocolat",
+		"type": "dessert",
+		"cuisine": "Française",
+		"difficulty": "Moyen",
+		"prepTime": 20,
+		"cookTime": 25,
+		"Time": 45,
+		"servings": 6,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Pâte sablée", "quantity": 1, "unit": "pcs" },
+			{ "name": "Chocolat", "quantity": 200, "unit": "g" }
+		],
+		"steps": ["Préparer la pâte.", "Faire la ganache.", "Cuire au four."],
+		"rating": 4.8
+	},
+	{
+		"id": 53,
+		"name": "Salade niçoise",
+		"type": "entrée",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 15,
+		"cookTime": 0,
+		"Time": 15,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Tomates", "quantity": 2, "unit": "pcs" },
+			{ "name": "Thon", "quantity": 100, "unit": "g" }
+		],
+		"steps": ["Préparer les légumes.", "Ajouter le thon.", "Assaisonner."],
+		"rating": 4.4
+	},
+	{
+		"id": 54,
+		"name": "Poulet curry coco",
+		"type": "plat",
+		"cuisine": "Indienne",
+		"difficulty": "Facile",
+		"prepTime": 15,
+		"cookTime": 25,
+		"Time": 40,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Poulet", "quantity": 600, "unit": "g" },
+			{ "name": "Lait de coco", "quantity": 20, "unit": "cl" }
+		],
+		"steps": ["Cuire le poulet.", "Ajouter le lait de coco.", "Assaisonner."],
+		"rating": 4.6
+	},
+	{
+		"id": 55,
+		"name": "Soupe de tomates",
+		"type": "entrée",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 20,
+		"Time": 30,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Tomates", "quantity": 5, "unit": "pcs" },
+			{ "name": "Oignon", "quantity": 1, "unit": "pcs" }
+		],
+		"steps": ["Cuire les tomates.", "Mixer.", "Assaisonner."],
+		"rating": 4.1
+	},
+	{
+		"id": 56,
+		"name": "Pâtes bolognaise",
+		"type": "plat",
+		"cuisine": "Italienne",
+		"difficulty": "Facile",
+		"prepTime": 15,
+		"cookTime": 30,
+		"Time": 45,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Pâtes", "quantity": 400, "unit": "g" },
+			{ "name": "Viande hachée", "quantity": 200, "unit": "g" }
+		],
+		"steps": ["Cuire les pâtes.", "Préparer la sauce.", "Mélanger."],
+		"rating": 4.7
+	},
+	{
+		"id": 57,
+		"name": "Soupe de poireaux",
+		"type": "entrée",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 20,
+		"Time": 30,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Poireaux", "quantity": 3, "unit": "pcs" },
+			{ "name": "Pommes de terre", "quantity": 2, "unit": "pcs" }
+		],
+		"steps": ["Cuire les légumes.", "Mixer.", "Assaisonner."],
+		"rating": 4.2
+	},
+	{
+		"id": 58,
+		"name": "Tarte aux fraises",
+		"type": "dessert",
+		"cuisine": "Française",
+		"difficulty": "Moyen",
+		"prepTime": 20,
+		"cookTime": 25,
+		"Time": 45,
+		"servings": 6,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Pâte sablée", "quantity": 1, "unit": "pcs" },
+			{ "name": "Fraises", "quantity": 300, "unit": "g" }
+		],
+		"steps": ["Préparer la pâte.", "Disposer les fraises.", "Cuire au four."],
+		"rating": 4.8
+	},
+	{
+		"id": 59,
+		"name": "Soupe de pois cassés",
+		"type": "entrée",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 15,
+		"cookTime": 40,
+		"Time": 55,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Pois cassés", "quantity": 200, "unit": "g" },
+			{ "name": "Carottes", "quantity": 2, "unit": "pcs" }
+		],
+		"steps": ["Cuire les pois cassés.", "Ajouter les carottes.", "Mixer."],
+		"rating": 4.3
+	},
+	{
+		"id": 60,
+		"name": "Pâtes aux légumes",
+		"type": "plat",
+		"cuisine": "Italienne",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 15,
+		"Time": 25,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Pâtes", "quantity": 400, "unit": "g" },
+			{ "name": "Légumes variés", "quantity": 200, "unit": "g" }
+		],
+		"steps": ["Cuire les pâtes.", "Ajouter les légumes.", "Mélanger."],
+		"rating": 4.4
+	},
+	{
+		"id": 61,
+		"name": "Soupe de brocolis",
+		"type": "entrée",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 20,
+		"Time": 30,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Brocolis", "quantity": 1, "unit": "pcs" },
+			{ "name": "Crème", "quantity": 10, "unit": "cl" }
+		],
+		"steps": ["Cuire les brocolis.", "Mixer.", "Ajouter la crème."],
+		"rating": 4.2
+	},
+	{
+		"id": 62,
+		"name": "Salade de pâtes",
+		"type": "entrée",
+		"cuisine": "Italienne",
+		"difficulty": "Facile",
+		"prepTime": 15,
+		"cookTime": 10,
+		"Time": 25,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Pâtes", "quantity": 200, "unit": "g" },
+			{ "name": "Légumes variés", "quantity": 150, "unit": "g" }
+		],
+		"steps": ["Cuire les pâtes.", "Ajouter les légumes.", "Assaisonner."],
+		"rating": 4.3
+	},
+	{
+		"id": 63,
+		"name": "Soupe de champignons",
+		"type": "entrée",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 20,
+		"Time": 30,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Champignons", "quantity": 300, "unit": "g" },
+			{ "name": "Crème", "quantity": 10, "unit": "cl" }
+		],
+		"steps": ["Cuire les champignons.", "Mixer.", "Ajouter la crème."],
+		"rating": 4.4
+	},
+	{
+		"id": 64,
+		"name": "Soupe de courge",
+		"type": "entrée",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 20,
+		"Time": 30,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Courge", "quantity": 500, "unit": "g" },
+			{ "name": "Crème", "quantity": 10, "unit": "cl" }
+		],
+		"steps": ["Cuire la courge.", "Mixer.", "Ajouter la crème."],
+		"rating": 4.2
+	},
+	{
+		"id": 65,
+		"name": "Soupe de patate douce",
+		"type": "entrée",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 20,
+		"Time": 30,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Patate douce", "quantity": 500, "unit": "g" },
+			{ "name": "Crème", "quantity": 10, "unit": "cl" }
+		],
+		"steps": ["Cuire la patate douce.", "Mixer.", "Ajouter la crème."],
+		"rating": 4.3
+	},
+	{
+		"id": 66,
+		"name": "Soupe de pois chiches",
+		"type": "entrée",
+		"cuisine": "Moyen-Orient",
+		"difficulty": "Facile",
+		"prepTime": 15,
+		"cookTime": 30,
+		"Time": 45,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Pois chiches", "quantity": 200, "unit": "g" },
+			{ "name": "Carottes", "quantity": 2, "unit": "pcs" }
+		],
+		"steps": ["Cuire les pois chiches.", "Ajouter les carottes.", "Mixer."],
+		"rating": 4.2
+	},
+	{
+		"id": 67,
+		"name": "Soupe de navets",
+		"type": "entrée",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 20,
+		"Time": 30,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Navets", "quantity": 400, "unit": "g" },
+			{ "name": "Crème", "quantity": 10, "unit": "cl" }
+		],
+		"steps": ["Cuire les navets.", "Mixer.", "Ajouter la crème."],
+		"rating": 4.1
+	},
+	{
+		"id": 68,
+		"name": "Soupe de céleri",
+		"type": "entrée",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 20,
+		"Time": 30,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Céleri", "quantity": 400, "unit": "g" },
+			{ "name": "Crème", "quantity": 10, "unit": "cl" }
+		],
+		"steps": ["Cuire le céleri.", "Mixer.", "Ajouter la crème."],
+		"rating": 4.2
+	},
+	{
+		"id": 69,
+		"name": "Soupe de fenouil",
+		"type": "entrée",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 20,
+		"Time": 30,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Fenouil", "quantity": 400, "unit": "g" },
+			{ "name": "Crème", "quantity": 10, "unit": "cl" }
+		],
+		"steps": ["Cuire le fenouil.", "Mixer.", "Ajouter la crème."],
+		"rating": 4.1
+	},
+	{
+		"id": 70,
+		"name": "Soupe de poivrons",
+		"type": "entrée",
+		"cuisine": "Française",
+		"difficulty": "Facile",
+		"prepTime": 10,
+		"cookTime": 20,
+		"Time": 30,
+		"servings": 4,
+		"image": "url...",
+		"ingredients": [
+			{ "name": "Poivrons", "quantity": 400, "unit": "g" },
+			{ "name": "Crème", "quantity": 10, "unit": "cl" }
+		],
+		"steps": ["Cuire les poivrons.", "Mixer.", "Ajouter la crème."],
+		"rating": 4.2
+	}
 ]
