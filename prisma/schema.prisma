@@ -1,9 +1,6 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client"
   output   = "../generated/prisma"
@@ -13,6 +10,8 @@ datasource db {
   provider = "postgresql"
 }
 
+// --- UTILISATEUR & AUTH (Better Auth) ---
+
 model User {
   id            String    @id
   name          String
@@ -21,8 +20,12 @@ model User {
   image         String?
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
+  
   sessions      Session[]
   accounts      Account[]
+
+  customRecipes CustomRecipe[] 
+  mealPlans     MealPlanning[]
 
   @@unique([email])
   @@map("user")
@@ -74,4 +77,47 @@ model Verification {
 
   @@index([identifier])
   @@map("verification")
+}
+
+// --- RECIPES & PLANNING ---
+
+model CustomRecipe {
+  id          String   @id @default(uuid())
+  userId      String   @map("user_id")
+  name        String
+  type        String?  
+  cuisine     String?
+  difficulty  String?
+  prepTime    Int?     @map("prep_time")
+  cookTime    Int?     @map("cook_time")
+  servings    Int?
+  image       String?
+  
+  ingredients Json?    
+  steps       Json?    
+  
+  rating      Decimal? @default(0)
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("custom_recipes")
+}
+
+model MealPlanning {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  date      DateTime @db.Date
+  slot      String?  @default("diner") 
+  
+  recipeId  String   @map("recipe_id") 
+  source    String   
+  
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("meal_planning")
 }
