@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import recipesData from "../../data/recipes.json";
 import "./recipedetail.css";
 
@@ -143,7 +143,7 @@ const RecipeDetail = () => {
 					<h3 className="section-title">Instructions</h3>
 					<ul className="instruction-list">
 						{Array.isArray(steps) && steps.length > 0 ? (
-							steps.map((step, index) => (
+							steps.map((step) => (
 								<li key={step} className="list-item">
 									{step}
 								</li>
