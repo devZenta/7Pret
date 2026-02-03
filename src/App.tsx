@@ -22,6 +22,7 @@ function App() {
 				<Route path="/Catalogue" element={<Catalogue />} />
 				<Route path="CreateRecipe" element={<CreateRecipe />} />
 				<Route path="/recipe/:id" element={<RecipeDetail />} />
+				<Route path="/shopingList/:id" element={<ShoppingList />} />
 
 				<Route path="*" element={<Navigate replace to="/" />} />
 			</Routes>
