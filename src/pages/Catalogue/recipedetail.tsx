@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import recipesData from "../../data/recipes.json";
 import "./recipedetail.css";
 
@@ -26,8 +26,21 @@ interface RecipeDetailProps {
 
 const RecipeDetail = () => {
 	const { id } = useParams<{ id: string }>();
+	const navigate = useNavigate();
 	const [recipe, setRecipe] = useState<RecipeDetailProps | null>(null);
 	const [error, setError] = useState<string>("");
+
+	const handleAddToShoppingList = () => {
+		if (!recipe) return;
+		const currentPanier = JSON.parse(localStorage.getItem("panier") || "[]");
+
+		if (recipe.ingredients) {
+			currentPanier.push(...recipe.ingredients);
+		}
+
+		localStorage.setItem("panier", JSON.stringify(currentPanier));
+		navigate("/ShoppingList");
+	};
 
 	useEffect(() => {
 		try {
@@ -66,6 +79,14 @@ const RecipeDetail = () => {
 			<a href="/Catalogue" className="back-link">
 				← Retour au catalogue
 			</a>
+
+			<button
+				type="button"
+				onClick={handleAddToShoppingList}
+				style={{ fontSize: "0.6rem" }}
+			>
+				<h3>Ajouter les ingrédients au panier</h3>
+			</button>
 
 			<h1 className="recipe-header-title">Détails de la recette</h1>
 
@@ -111,7 +132,7 @@ const RecipeDetail = () => {
 						{ingredients.length > 0 ? (
 							ingredients.map((ingredient, index) => (
 								<li key={`${ingredient.name}-${index}`} className="list-item">
-									{ingredient.quantity} {ingredient.unit} {ingredient.name}
+									{ingredient.name} : {ingredient.quantity} {ingredient.unit}
 								</li>
 							))
 						) : (
