@@ -1,4 +1,5 @@
 import type React from "react";
+import "./Header.css";
 
 interface HeaderProps {
 	logoUrl: string;
@@ -6,12 +7,12 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ logoUrl = "./public/logo.png" }) => {
 	return (
-		<header style={styles.header}>
-			<div className="logo-container">
-				<img src={logoUrl} alt="Logo" style={styles.logo} />
+		<header className="header">
+			<div className="logo">
+				<img src={logoUrl} alt="Logo" />
 			</div>
-			<nav>
-				<ul style={styles.navList}>
+			<nav className="navigation">
+				<ul>
 					<li>
 						<a href="/">Accueil</a>
 					</li>
@@ -19,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ logoUrl = "./public/logo.png" }) => {
 						<a href="/ShoppingList">Panier</a>
 					</li>
 					<li>
-						<a href="/Recette Certifié">Recette Certifié</a>
+						<a href="/CertifRecipe">Recette Certifié</a>
 					</li>
 					<li>
 						<a href="/Catalogue">Catalogue</a>
@@ -31,18 +32,6 @@ const Header: React.FC<HeaderProps> = ({ logoUrl = "./public/logo.png" }) => {
 			</nav>
 		</header>
 	);
-};
-
-const styles = {
-	header: {
-		display: "flex",
-		justifyContent: "space-between",
-		padding: "1rem",
-		background: "#eee2dfff",
-		color: "#562b2bff",
-	},
-	logo: { width: "200px", marginRight: "10px" },
-	navList: { display: "flex", listStyle: "none", gap: "20px" },
 };
 
 export default Header;
