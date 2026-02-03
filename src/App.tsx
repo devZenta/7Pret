@@ -10,6 +10,7 @@ import RecipeDetail from "./pages/Catalogue/recipedetail";
 import CreateRecipe from "./pages/CreateRecipe/page";
 import Home from "./pages/Home/page";
 import ShoppingList from "./pages/ShoppingList/page";
+import CertifRecipe from "./pages/CertifRecipe/page";
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 				<Route path="/" element={<Home />} />
 				<Route path="/ShoppingList" element={<ShoppingList />} />
 				<Route path="/Catalogue" element={<Catalogue />} />
+				<Route path="/CertifRecipe" element={<CertifRecipe />} />
 				<Route path="CreateRecipe" element={<CreateRecipe />} />
 				<Route path="/recipe/:id" element={<RecipeDetail />} />
 				<Route path="/shopingList/:id" element={<ShoppingList />} />
