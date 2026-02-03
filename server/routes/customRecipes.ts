@@ -5,30 +5,30 @@ import {
 	SuccessResponseSchema,
 } from "../schemas/common.schema";
 import {
-	CreateMealPlanningSchema,
-	MealPlanningListSchema,
-	MealPlanningSchema,
-	UpdateMealPlanningSchema,
-} from "../schemas/planning.schema";
-import { planningService } from "../services/planningService";
+	CreateCustomRecipeSchema,
+	CustomRecipeListSchema,
+	CustomRecipeSchema,
+	UpdateCustomRecipeSchema,
+} from "../schemas/customRecipe.schema";
+import { customRecipeService } from "../services/customRecipeService";
 
-const planningApp = new OpenAPIHono<{ Variables: AuthVariables }>();
+const customRecipesApp = new OpenAPIHono<{ Variables: AuthVariables }>();
 
-planningApp.use("*", authMiddleware);
+customRecipesApp.use("*", authMiddleware);
 
-const getMyPlanningRoute = createRoute({
+const getAllCustomRecipesRoute = createRoute({
 	method: "get",
 	path: "/",
-	tags: ["Planning"],
-	summary: "Get my meal planning",
-	description: "Returns all meal planning entries for the authenticated user",
+	tags: ["Custom Recipes"],
+	summary: "Get all my custom recipes",
+	description: "Returns all custom recipes for the authenticated user",
 	security: [{ cookieAuth: [] }],
 	responses: {
 		200: {
-			description: "List of meal planning entries",
+			description: "List of custom recipes",
 			content: {
 				"application/json": {
-					schema: MealPlanningListSchema,
+					schema: CustomRecipeListSchema,
 				},
 			},
 		},
@@ -51,12 +51,13 @@ const getMyPlanningRoute = createRoute({
 	},
 });
 
-const getMealByIdRoute = createRoute({
+const getCustomRecipeByIdRoute = createRoute({
 	method: "get",
 	path: "/{id}",
-	tags: ["Planning"],
-	summary: "Get a meal planning entry by ID",
-	description: "Returns a single meal planning entry by its ID",
+	tags: ["Custom Recipes"],
+	summary: "Get a custom recipe by ID",
+	description:
+		"Returns a single custom recipe by its ID (must belong to the authenticated user)",
 	security: [{ cookieAuth: [] }],
 	request: {
 		params: z.object({
@@ -68,10 +69,10 @@ const getMealByIdRoute = createRoute({
 	},
 	responses: {
 		200: {
-			description: "Meal planning entry found",
+			description: "Custom recipe found",
 			content: {
 				"application/json": {
-					schema: MealPlanningSchema,
+					schema: CustomRecipeSchema,
 				},
 			},
 		},
@@ -84,7 +85,7 @@ const getMealByIdRoute = createRoute({
 			},
 		},
 		404: {
-			description: "Meal planning entry not found",
+			description: "Custom recipe not found",
 			content: {
 				"application/json": {
 					schema: ErrorResponseSchema,
@@ -102,28 +103,28 @@ const getMealByIdRoute = createRoute({
 	},
 });
 
-const addMealRoute = createRoute({
+const createCustomRecipeRoute = createRoute({
 	method: "post",
 	path: "/",
-	tags: ["Planning"],
-	summary: "Add a meal to planning",
-	description: "Adds a new meal to the authenticated user's planning",
+	tags: ["Custom Recipes"],
+	summary: "Create a custom recipe",
+	description: "Creates a new custom recipe for the authenticated user",
 	security: [{ cookieAuth: [] }],
 	request: {
 		body: {
 			content: {
 				"application/json": {
-					schema: CreateMealPlanningSchema,
+					schema: CreateCustomRecipeSchema,
 				},
 			},
 		},
 	},
 	responses: {
 		201: {
-			description: "Meal added to planning",
+			description: "Custom recipe created",
 			content: {
 				"application/json": {
-					schema: MealPlanningSchema,
+					schema: CustomRecipeSchema,
 				},
 			},
 		},
@@ -154,12 +155,13 @@ const addMealRoute = createRoute({
 	},
 });
 
-const updateMealRoute = createRoute({
+const updateCustomRecipeRoute = createRoute({
 	method: "patch",
 	path: "/{id}",
-	tags: ["Planning"],
-	summary: "Update a meal in planning",
-	description: "Updates an existing meal in the authenticated user's planning",
+	tags: ["Custom Recipes"],
+	summary: "Update a custom recipe",
+	description:
+		"Updates an existing custom recipe (must belong to the authenticated user)",
 	security: [{ cookieAuth: [] }],
 	request: {
 		params: z.object({
@@ -171,17 +173,17 @@ const updateMealRoute = createRoute({
 		body: {
 			content: {
 				"application/json": {
-					schema: UpdateMealPlanningSchema,
+					schema: UpdateCustomRecipeSchema,
 				},
 			},
 		},
 	},
 	responses: {
 		200: {
-			description: "Meal updated",
+			description: "Custom recipe updated",
 			content: {
 				"application/json": {
-					schema: MealPlanningSchema,
+					schema: CustomRecipeSchema,
 				},
 			},
 		},
@@ -202,7 +204,7 @@ const updateMealRoute = createRoute({
 			},
 		},
 		404: {
-			description: "Meal not found",
+			description: "Custom recipe not found",
 			content: {
 				"application/json": {
 					schema: ErrorResponseSchema,
@@ -220,12 +222,13 @@ const updateMealRoute = createRoute({
 	},
 });
 
-const deleteMealRoute = createRoute({
+const deleteCustomRecipeRoute = createRoute({
 	method: "delete",
 	path: "/{id}",
-	tags: ["Planning"],
-	summary: "Delete a meal from planning",
-	description: "Removes a meal from the authenticated user's planning",
+	tags: ["Custom Recipes"],
+	summary: "Delete a custom recipe",
+	description:
+		"Deletes a custom recipe (must belong to the authenticated user)",
 	security: [{ cookieAuth: [] }],
 	request: {
 		params: z.object({
@@ -237,7 +240,7 @@ const deleteMealRoute = createRoute({
 	},
 	responses: {
 		200: {
-			description: "Meal deleted",
+			description: "Custom recipe deleted",
 			content: {
 				"application/json": {
 					schema: SuccessResponseSchema,
@@ -253,7 +256,7 @@ const deleteMealRoute = createRoute({
 			},
 		},
 		404: {
-			description: "Meal not found",
+			description: "Custom recipe not found",
 			content: {
 				"application/json": {
 					schema: ErrorResponseSchema,
@@ -271,80 +274,98 @@ const deleteMealRoute = createRoute({
 	},
 });
 
-planningApp.openapi(getMyPlanningRoute, async (c) => {
+customRecipesApp.openapi(getAllCustomRecipesRoute, async (c) => {
 	try {
 		const user = c.get("user");
-		const planning = await planningService.getUserPlanning(user.id);
-		return c.json(planning, 200);
-	} catch (_e) {
-		return c.json({ success: false, message: "Failed to fetch planning" }, 500);
-	}
-});
-
-planningApp.openapi(getMealByIdRoute, async (c) => {
-	try {
-		const user = c.get("user");
-		const id = c.req.param("id");
-		const meal = await planningService.getById(id, user.id);
-
-		if (!meal) {
-			return c.json({ success: false, message: "Meal not found" }, 404);
-		}
-
-		return c.json(meal, 200);
-	} catch (_e) {
-		return c.json({ success: false, message: "Failed to fetch meal" }, 500);
-	}
-});
-
-planningApp.openapi(addMealRoute, async (c) => {
-	try {
-		const user = c.get("user");
-		const body = c.req.valid("json");
-		const meal = await planningService.addMeal(user.id, body);
-		return c.json(meal, 201);
+		const recipes = await customRecipeService.getAll(user.id);
+		return c.json(recipes, 200);
 	} catch (_e) {
 		return c.json(
-			{ success: false, message: "Failed to add meal to planning" },
+			{ success: false, message: "Failed to fetch custom recipes" },
 			500,
 		);
 	}
 });
 
-planningApp.openapi(updateMealRoute, async (c) => {
+customRecipesApp.openapi(getCustomRecipeByIdRoute, async (c) => {
+	try {
+		const user = c.get("user");
+		const id = c.req.param("id");
+		const recipe = await customRecipeService.getById(id, user.id);
+
+		if (!recipe) {
+			return c.json(
+				{ success: false, message: "Custom recipe not found" },
+				404,
+			);
+		}
+
+		return c.json(recipe, 200);
+	} catch (_e) {
+		return c.json(
+			{ success: false, message: "Failed to fetch custom recipe" },
+			500,
+		);
+	}
+});
+
+customRecipesApp.openapi(createCustomRecipeRoute, async (c) => {
+	try {
+		const user = c.get("user");
+		const body = c.req.valid("json");
+		const recipe = await customRecipeService.create(user.id, body);
+		return c.json(recipe, 201);
+	} catch (_e) {
+		return c.json(
+			{ success: false, message: "Failed to create custom recipe" },
+			500,
+		);
+	}
+});
+
+customRecipesApp.openapi(updateCustomRecipeRoute, async (c) => {
 	try {
 		const user = c.get("user");
 		const id = c.req.param("id");
 		const body = c.req.valid("json");
-		const meal = await planningService.updateMeal(id, user.id, body);
+		const recipe = await customRecipeService.update(id, user.id, body);
 
-		if (!meal) {
-			return c.json({ success: false, message: "Meal not found" }, 404);
+		if (!recipe) {
+			return c.json(
+				{ success: false, message: "Custom recipe not found" },
+				404,
+			);
 		}
 
-		return c.json(meal, 200);
+		return c.json(recipe, 200);
 	} catch (_e) {
-		return c.json({ success: false, message: "Failed to update meal" }, 500);
+		return c.json(
+			{ success: false, message: "Failed to update custom recipe" },
+			500,
+		);
 	}
 });
 
-planningApp.openapi(deleteMealRoute, async (c) => {
+customRecipesApp.openapi(deleteCustomRecipeRoute, async (c) => {
 	try {
 		const user = c.get("user");
 		const id = c.req.param("id");
-		const deleted = await planningService.removeMeal(id, user.id);
+		const deleted = await customRecipeService.delete(id, user.id);
 
 		if (!deleted) {
-			return c.json({ success: false, message: "Meal not found" }, 404);
+			return c.json(
+				{ success: false, message: "Custom recipe not found" },
+				404,
+			);
 		}
 
-		return c.json(
-			{ success: true, message: "Meal deleted from planning" },
-			200,
-		);
+		return c.json({ success: true, message: "Custom recipe deleted" }, 200);
 	} catch (_e) {
-		return c.json({ success: false, message: "Failed to delete meal" }, 500);
+		return c.json(
+			{ success: false, message: "Failed to delete custom recipe" },
+			500,
+		);
 	}
 });
 
-export default planningApp;
+export default customRecipesApp;
