@@ -81,6 +81,27 @@ model Verification {
 
 // --- RECIPES & PLANNING ---
 
+model Recipe {
+  id          Int      @id @default(autoincrement())
+  name        String
+  type        String
+  cuisine     String
+  difficulty  String
+  prepTime    Int      @map("prep_time")
+  cookTime    Int      @map("cook_time")
+  servings    Int
+  image       String?
+
+  ingredients Json
+  steps       Json
+
+  rating      Decimal  @default(0)
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("recipes")
+}
+
 model CustomRecipe {
   id          String   @id @default(uuid())
   userId      String   @map("user_id")
