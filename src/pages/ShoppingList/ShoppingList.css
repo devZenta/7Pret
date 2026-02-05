@@ -125,6 +125,92 @@
 	margin-top: 2rem;
 }
 
+/* Recipe Group Styles */
+.recipe-group {
+	margin-bottom: 2rem;
+	background-color: #252525;
+	border-radius: 8px;
+	padding: 1rem;
+	border: 1px solid #3d3d3d;
+}
+
+.recipe-group-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	padding-bottom: 0.75rem;
+	border-bottom: 2px solid #c67a53;
+	flex-wrap: wrap;
+}
+
+.recipe-group-title {
+	font-size: 1.25rem;
+	color: #c67a53;
+	margin: 0;
+	flex: 1;
+}
+
+.servings-control {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	background-color: #1a1a1a;
+	padding: 0.25rem 0.5rem;
+	border-radius: 4px;
+}
+
+.servings-btn {
+	width: 30px;
+	height: 30px;
+	background-color: #c67a53;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 1.2rem;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.2s;
+}
+
+.servings-btn:hover {
+	background-color: #a76556;
+}
+
+.servings-display {
+	min-width: 60px;
+	text-align: center;
+	font-weight: bold;
+	color: #eedcca;
+}
+
+.delete-group-btn {
+	background-color: #3e2020;
+	color: #ff8a80;
+	border: 1px solid #5c2b2b;
+	padding: 8px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 0.9rem;
+	transition: background-color 0.3s;
+}
+
+.delete-group-btn:hover {
+	background-color: #5c2b2b;
+}
+
+.manual-items {
+	border-color: #555;
+}
+
+.manual-items .recipe-group-title {
+	color: #888;
+}
+
 /* Responsive adjustments */
 @media (max-width: 480px) {
 	.shopping-list-container {
