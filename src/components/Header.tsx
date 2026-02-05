@@ -34,7 +34,12 @@ const Header: React.FC<HeaderProps> = ({ logoUrl = "./public/logo.png" }) => {
 					</li>
 					<li>
 						<a href="/settings" className="user-link">
-							<img src={UserIcon} alt="Mon compte" className="user-icon" />
+							<img
+								src={UserIcon}
+								alt="Mon compte"
+								className="user-icon"
+								style={{ width: "22px", height: "22px" }}
+							/>
 						</a>
 					</li>
 				</ul>
