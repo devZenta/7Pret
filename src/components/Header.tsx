@@ -1,4 +1,5 @@
 import type React from "react";
+import UserIcon from "../assets/user-icon.svg";
 import "./Header.css";
 
 interface HeaderProps {
@@ -27,6 +28,11 @@ const Header: React.FC<HeaderProps> = ({ logoUrl = "./public/logo.png" }) => {
 					</li>
 					<li>
 						<a href="/CreateRecipe">Creer une Recette+</a>
+					</li>
+					<li>
+						<a href="/settings" className="user-link">
+							<img src={UserIcon} alt="Mon compte" className="user-icon" />
+						</a>
 					</li>
 				</ul>
 			</nav>
