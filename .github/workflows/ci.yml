@@ -50,7 +50,7 @@ jobs:
       - name: Generate Prisma Client
         run: bunx --bun prisma generate
         env:
-          DATABASE_URL: "postgresql://fake:fake@localhost:5432/fake"
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
       - name: Type check
         run: bun run typecheck
@@ -74,4 +74,4 @@ jobs:
       - name: Build
         run: bun run build
         env:
-          DATABASE_URL: "postgresql://fake:fake@localhost:5432/fake"
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
