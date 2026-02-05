@@ -3,7 +3,7 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 0.75rem 4rem;
-	background: linear-gradient(135deg, #EEE2DF 0%, #EED7C5 100%);
+	background: linear-gradient(135deg, #eee2df 0%, #eed7c5 100%);
 	box-shadow: 0 4px 20px rgba(179, 106, 94, 0.15);
 	position: sticky;
 	top: 0;
@@ -33,7 +33,7 @@
 .logo h1 {
 	margin: 0;
 	font-size: 1.5rem;
-	color: #B36A5E;
+	color: #b36a5e;
 	margin-left: 10px;
 	font-weight: 700;
 }
@@ -50,7 +50,7 @@
 
 .navigation a {
 	text-decoration: none;
-	color: #B36A5E;
+	color: #b36a5e;
 	font-weight: 600;
 	font-size: 0.95rem;
 	letter-spacing: 0.3px;
@@ -61,7 +61,7 @@
 }
 
 .navigation a:hover {
-	color: #CA7C5C;
+	color: #ca7c5c;
 	background: rgba(202, 124, 92, 0.1);
 }
 
@@ -73,7 +73,7 @@
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	background: linear-gradient(90deg, #CA7C5C, #B36A5E);
+	background: linear-gradient(90deg, #ca7c5c, #b36a5e);
 	transition: width 0.3s ease;
 	border-radius: 2px;
 }
@@ -90,7 +90,7 @@
 
 /* Active link style */
 .navigation a.active {
-	color: #CA7C5C;
+	color: #ca7c5c;
 	background: rgba(202, 124, 92, 0.15);
 }
 
@@ -104,7 +104,7 @@
 	align-items: center;
 	justify-content: center;
 	padding: 0.5rem;
-	background: linear-gradient(135deg, #CA7C5C 0%, #B36A5E 100%);
+	background: linear-gradient(135deg, #ca7c5c 0%, #b36a5e 100%);
 	border-radius: 50%;
 	width: 38px;
 	height: 38px;
@@ -115,7 +115,7 @@
 }
 
 .navigation a.user-link:hover {
-	background: linear-gradient(135deg, #B36A5E 0%, #9A5A50 100%);
+	background: linear-gradient(135deg, #b36a5e 0%, #9a5a50 100%);
 	transform: scale(1.05);
 }
 

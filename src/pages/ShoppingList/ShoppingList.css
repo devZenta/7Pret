@@ -3,7 +3,7 @@
 	max-width: 700px;
 	margin: 2rem auto;
 	padding: 2rem;
-	background: linear-gradient(180deg, #EEE2DF 0%, #EED7C5 100%);
+	background: linear-gradient(180deg, #eee2df 0%, #eed7c5 100%);
 	color: #5d4037;
 	border-radius: 16px;
 	box-shadow: 0 8px 30px rgba(179, 106, 94, 0.15);
@@ -14,7 +14,7 @@
 /* Main title */
 .shopping-list-title {
 	text-align: center;
-	color: #B36A5E;
+	color: #b36a5e;
 	margin-bottom: 1.5rem;
 	font-size: 2rem;
 	font-weight: 700;
@@ -32,7 +32,7 @@
 	padding: 12px 16px;
 	background-color: #fff;
 	color: #5d4037;
-	border: 2px solid #EED7C5;
+	border: 2px solid #eed7c5;
 	border-radius: 12px;
 	font-size: 1rem;
 	transition: all 0.3s;
@@ -40,17 +40,17 @@
 
 .item-input:focus {
 	outline: none;
-	border-color: #CA7C5C;
+	border-color: #ca7c5c;
 	box-shadow: 0 0 0 3px rgba(202, 124, 92, 0.15);
 }
 
 .item-input::placeholder {
-	color: #C89F9C;
+	color: #c89f9c;
 }
 
 .add-button {
 	padding: 12px 24px;
-	background: linear-gradient(135deg, #CA7C5C 0%, #B36A5E 100%);
+	background: linear-gradient(135deg, #ca7c5c 0%, #b36a5e 100%);
 	color: white;
 	border: none;
 	border-radius: 12px;
@@ -76,7 +76,7 @@
 	align-items: center;
 	justify-content: space-between;
 	background-color: #fff;
-	border: 1px solid #EED7C5;
+	border: 1px solid #eed7c5;
 	color: #5d4037;
 	padding: 12px 16px;
 	margin-bottom: 8px;
@@ -92,7 +92,7 @@
 
 .shopping-item.completed span {
 	text-decoration: line-through;
-	color: #C89F9C;
+	color: #c89f9c;
 }
 
 /* Actions within a list item */
@@ -103,8 +103,8 @@
 
 .delete-button {
 	background-color: #fff;
-	color: #B36A5E;
-	border: 1px solid #C89F9C;
+	color: #b36a5e;
+	border: 1px solid #c89f9c;
 	padding: 6px 12px;
 	border-radius: 8px;
 	cursor: pointer;
@@ -113,9 +113,9 @@
 }
 
 .delete-button:hover {
-	background-color: #B36A5E;
+	background-color: #b36a5e;
 	color: #fff;
-	border-color: #B36A5E;
+	border-color: #b36a5e;
 }
 
 .checkbox {
@@ -123,19 +123,19 @@
 	cursor: pointer;
 	width: 20px;
 	height: 20px;
-	accent-color: #CA7C5C;
+	accent-color: #ca7c5c;
 }
 
 /* Empty state message */
 .empty-message {
 	text-align: center;
-	color: #C89F9C;
+	color: #c89f9c;
 	font-style: italic;
 	margin-top: 2rem;
 	padding: 2rem;
 	background: #fff;
 	border-radius: 12px;
-	border: 2px dashed #EED7C5;
+	border: 2px dashed #eed7c5;
 }
 
 /* Recipe Group Styles */
@@ -144,7 +144,7 @@
 	background-color: #fff;
 	border-radius: 16px;
 	padding: 1.25rem;
-	border: 1px solid #EED7C5;
+	border: 1px solid #eed7c5;
 	box-shadow: 0 4px 12px rgba(179, 106, 94, 0.08);
 }
 
@@ -155,13 +155,13 @@
 	gap: 1rem;
 	margin-bottom: 1rem;
 	padding-bottom: 0.75rem;
-	border-bottom: 2px solid #CA7C5C;
+	border-bottom: 2px solid #ca7c5c;
 	flex-wrap: wrap;
 }
 
 .recipe-group-title {
 	font-size: 1.25rem;
-	color: #B36A5E;
+	color: #b36a5e;
 	margin: 0;
 	flex: 1;
 	font-weight: 600;
@@ -171,7 +171,7 @@
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
-	background-color: #EEE2DF;
+	background-color: #eee2df;
 	padding: 0.25rem 0.5rem;
 	border-radius: 8px;
 }
@@ -179,7 +179,7 @@
 .servings-btn {
 	width: 32px;
 	height: 32px;
-	background: linear-gradient(135deg, #CA7C5C 0%, #B36A5E 100%);
+	background: linear-gradient(135deg, #ca7c5c 0%, #b36a5e 100%);
 	color: white;
 	border: none;
 	border-radius: 8px;
@@ -201,13 +201,13 @@
 	min-width: 60px;
 	text-align: center;
 	font-weight: bold;
-	color: #B36A5E;
+	color: #b36a5e;
 }
 
 .delete-group-btn {
 	background-color: #fff;
-	color: #B36A5E;
-	border: 1px solid #C89F9C;
+	color: #b36a5e;
+	border: 1px solid #c89f9c;
 	padding: 8px 16px;
 	border-radius: 8px;
 	cursor: pointer;
@@ -216,17 +216,17 @@
 }
 
 .delete-group-btn:hover {
-	background-color: #B36A5E;
+	background-color: #b36a5e;
 	color: #fff;
-	border-color: #B36A5E;
+	border-color: #b36a5e;
 }
 
 .manual-items {
-	border-color: #C89F9C;
+	border-color: #c89f9c;
 }
 
 .manual-items .recipe-group-title {
-	color: #C89F9C;
+	color: #c89f9c;
 }
 
 /* Responsive adjustments */

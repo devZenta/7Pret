@@ -4,7 +4,7 @@
 	align-items: center;
 	min-height: calc(100vh - 80px);
 	padding: 2rem;
-	background: linear-gradient(180deg, #EEE2DF 0%, #EED7C5 100%);
+	background: linear-gradient(180deg, #eee2df 0%, #eed7c5 100%);
 }
 
 .settings-card {
@@ -15,7 +15,7 @@
 	max-width: 450px;
 	box-shadow: 0 8px 30px rgba(179, 106, 94, 0.15);
 	text-align: center;
-	border: 1px solid #EED7C5;
+	border: 1px solid #eed7c5;
 }
 
 .user-icon {
@@ -26,25 +26,25 @@
 }
 
 .settings-card h1 {
-	color: #B36A5E;
+	color: #b36a5e;
 	font-size: 1.75rem;
 	margin: 0 0 0.5rem 0;
 	font-weight: 700;
 }
 
 .settings-subtitle {
-	color: #C89F9C;
+	color: #c89f9c;
 	margin: 0 0 2rem 0;
 	font-size: 0.9rem;
 }
 
 .loading {
-	color: #C89F9C;
+	color: #c89f9c;
 	font-size: 1rem;
 }
 
 .user-info {
-	background-color: #EEE2DF;
+	background-color: #eee2df;
 	border-radius: 14px;
 	padding: 1.5rem;
 	margin: 1.5rem 0;
@@ -56,7 +56,7 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 0.75rem 0;
-	border-bottom: 1px solid #EED7C5;
+	border-bottom: 1px solid #eed7c5;
 }
 
 .info-row:last-child {
@@ -64,19 +64,19 @@
 }
 
 .info-label {
-	color: #C89F9C;
+	color: #c89f9c;
 	font-size: 0.9rem;
 	font-weight: 500;
 }
 
 .info-value {
-	color: #B36A5E;
+	color: #b36a5e;
 	font-size: 0.9rem;
 	font-weight: 600;
 }
 
 .primary-button {
-	background: linear-gradient(135deg, #CA7C5C 0%, #B36A5E 100%);
+	background: linear-gradient(135deg, #ca7c5c 0%, #b36a5e 100%);
 	color: white;
 	border: none;
 	padding: 0.875rem 2rem;
@@ -99,8 +99,8 @@
 
 .signout-button {
 	background-color: transparent;
-	color: #B36A5E;
-	border: 2px solid #CA7C5C;
+	color: #b36a5e;
+	border: 2px solid #ca7c5c;
 	padding: 0.875rem 2rem;
 	font-size: 1rem;
 	font-weight: 600;
@@ -112,7 +112,7 @@
 }
 
 .signout-button:hover {
-	background: linear-gradient(135deg, #CA7C5C 0%, #B36A5E 100%);
+	background: linear-gradient(135deg, #ca7c5c 0%, #b36a5e 100%);
 	color: white;
 	border-color: transparent;
 }

@@ -4,7 +4,7 @@
 	align-items: center;
 	min-height: 100vh;
 	padding: 2rem;
-	background: linear-gradient(180deg, #EEE2DF 0%, #EED7C5 100%);
+	background: linear-gradient(180deg, #eee2df 0%, #eed7c5 100%);
 }
 
 .login-card {
@@ -14,11 +14,11 @@
 	width: 100%;
 	max-width: 420px;
 	box-shadow: 0 8px 30px rgba(179, 106, 94, 0.15);
-	border: 1px solid #EED7C5;
+	border: 1px solid #eed7c5;
 }
 
 .login-card h1 {
-	color: #B36A5E;
+	color: #b36a5e;
 	font-size: 1.75rem;
 	margin: 0 0 0.5rem 0;
 	text-align: center;
@@ -26,7 +26,7 @@
 }
 
 .login-subtitle {
-	color: #C89F9C;
+	color: #c89f9c;
 	text-align: center;
 	margin: 0 0 2rem 0;
 	font-size: 0.9rem;
@@ -45,14 +45,14 @@
 }
 
 .form-group label {
-	color: #B36A5E;
+	color: #b36a5e;
 	font-weight: 600;
 	font-size: 0.9rem;
 }
 
 .form-group input {
 	padding: 0.875rem 1rem;
-	border: 2px solid #EED7C5;
+	border: 2px solid #eed7c5;
 	border-radius: 12px;
 	font-size: 1rem;
 	background-color: #fff;
@@ -61,12 +61,12 @@
 }
 
 .form-group input::placeholder {
-	color: #C89F9C;
+	color: #c89f9c;
 }
 
 .form-group input:focus {
 	outline: none;
-	border-color: #CA7C5C;
+	border-color: #ca7c5c;
 	box-shadow: 0 0 0 3px rgba(202, 124, 92, 0.15);
 }
 
@@ -86,7 +86,7 @@
 }
 
 .login-button {
-	background: linear-gradient(135deg, #CA7C5C 0%, #B36A5E 100%);
+	background: linear-gradient(135deg, #ca7c5c 0%, #b36a5e 100%);
 	color: white;
 	border: none;
 	padding: 0.875rem 1.5rem;
@@ -108,26 +108,26 @@
 }
 
 .login-button:disabled {
-	background: #EED7C5;
+	background: #eed7c5;
 	cursor: not-allowed;
 }
 
 .signup-link {
 	text-align: center;
 	margin-top: 1.5rem;
-	color: #C89F9C;
+	color: #c89f9c;
 	font-size: 0.9rem;
 }
 
 .signup-link a {
-	color: #CA7C5C;
+	color: #ca7c5c;
 	font-weight: 600;
 	text-decoration: none;
 }
 
 .signup-link a:hover {
 	text-decoration: underline;
-	color: #B36A5E;
+	color: #b36a5e;
 }
 
 @media (max-width: 480px) {

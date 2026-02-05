@@ -3,8 +3,8 @@
 	margin: 0 auto;
 	padding: 2rem 1rem;
 	font-family: sans-serif;
-	background: linear-gradient(180deg, #EEE2DF 0%, #EED7C5 100%);
-	color: #3D2E2A;
+	background: linear-gradient(180deg, #eee2df 0%, #eed7c5 100%);
+	color: #3d2e2a;
 	min-height: 100vh;
 }
 
@@ -13,7 +13,7 @@
 	align-items: center;
 	gap: 0.5rem;
 	margin-bottom: 1.5rem;
-	color: #B36A5E;
+	color: #b36a5e;
 	font-weight: 600;
 	text-decoration: none;
 	transition: all 0.2s;
@@ -24,7 +24,7 @@
 }
 
 .back-link:hover {
-	color: #CA7C5C;
+	color: #ca7c5c;
 	transform: translateX(-3px);
 }
 
@@ -32,7 +32,7 @@
 	font-size: 2rem;
 	font-weight: bold;
 	margin-bottom: 1rem;
-	color: #B36A5E;
+	color: #b36a5e;
 }
 
 .recipe-content {
@@ -59,7 +59,7 @@
 	font-size: 1.5rem;
 	font-weight: 600;
 	margin-bottom: 0.5rem;
-	color: #B36A5E;
+	color: #b36a5e;
 }
 
 .tags-wrapper {
@@ -78,17 +78,17 @@
 
 .tag-cuisine {
 	background-color: #fff;
-	color: #B36A5E;
-	border: 1px solid #EED7C5;
+	color: #b36a5e;
+	border: 1px solid #eed7c5;
 }
 
 .tag-difficulty {
-	background-color: #C89F9C;
+	background-color: #c89f9c;
 	color: #fff;
 }
 
 .tag-rating {
-	background-color: #CA7C5C;
+	background-color: #ca7c5c;
 	color: #fff;
 }
 
@@ -104,12 +104,12 @@
 	background-color: #fff;
 	padding: 0.75rem;
 	border-radius: 12px;
-	border: 1px solid #EED7C5;
+	border: 1px solid #eed7c5;
 	box-shadow: 0 2px 8px rgba(179, 106, 94, 0.08);
 }
 
 .stat-label {
-	color: #C89F9C;
+	color: #c89f9c;
 	font-size: 0.875rem;
 	margin: 0;
 	text-transform: uppercase;
@@ -117,7 +117,7 @@
 }
 
 .stat-value {
-	color: #B36A5E;
+	color: #b36a5e;
 	font-weight: 700;
 	font-size: 1.1rem;
 	margin: 0.25rem 0 0 0;
@@ -127,8 +127,8 @@
 	font-size: 1.25rem;
 	font-weight: 700;
 	margin-bottom: 0.75rem;
-	color: #3D2E2A;
-	border-bottom: 2px solid #CA7C5C;
+	color: #3d2e2a;
+	border-bottom: 2px solid #ca7c5c;
 	padding-bottom: 0.25rem;
 	display: inline-block;
 }
@@ -146,12 +146,12 @@
 	position: relative;
 	padding-left: 1.5rem;
 	margin-bottom: 0.5rem;
-	color: #3D2E2A;
+	color: #3d2e2a;
 }
 
 .ingredient-list .list-item::before {
 	content: "•";
-	color: #CA7C5C;
+	color: #ca7c5c;
 	font-size: 1.5rem;
 	position: absolute;
 	left: 0;
@@ -167,19 +167,19 @@
 }
 
 .instruction-list .list-item::marker {
-	color: #CA7C5C;
+	color: #ca7c5c;
 	font-weight: bold;
 }
 
 .list-item {
-	color: #3D2E2A;
+	color: #3d2e2a;
 	margin-bottom: 0.75rem;
 	line-height: 1.7;
 	font-weight: 500;
 }
 
 .empty-text {
-	color: #C89F9C;
+	color: #c89f9c;
 	font-style: italic;
 }
 
