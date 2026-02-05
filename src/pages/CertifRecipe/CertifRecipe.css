@@ -1,0 +1,161 @@
+.certif-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.certif-header {
+	margin-bottom: 2rem;
+}
+
+.certif-header h2 {
+	color: #3d2e2a;
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+}
+
+.certif-header p {
+	color: #6b5750;
+}
+
+.certif-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+	color: #3d2e2a;
+	padding: 0.5rem 1rem;
+	border-radius: 20px;
+	font-weight: 600;
+	font-size: 0.9rem;
+	margin-bottom: 1rem;
+}
+
+/* Recipe grid */
+.certif-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 1.5rem;
+}
+
+/* Recipe card */
+.certif-card {
+	background: #fff;
+	border-radius: 16px;
+	overflow: hidden;
+	text-decoration: none;
+	box-shadow: 0 4px 12px rgba(61, 46, 42, 0.08);
+	transition: all 0.3s ease;
+	border: 2px solid #ffd700;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.certif-card::before {
+	content: "⭐ Certifiée";
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+	color: #3d2e2a;
+	padding: 0.25rem 0.75rem;
+	border-radius: 20px;
+	font-size: 0.75rem;
+	font-weight: 600;
+	z-index: 2;
+}
+
+.certif-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 8px 24px rgba(255, 215, 0, 0.25);
+}
+
+.certif-card-image {
+	width: 100%;
+	height: 180px;
+	overflow: hidden;
+	background: #f5ebe6;
+	position: relative;
+	flex-shrink: 0;
+}
+
+.certif-card-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.certif-card-difficulty {
+	position: absolute;
+	bottom: 8px;
+	right: 8px;
+	background: linear-gradient(135deg, #ca7c5c 0%, #a65a42 100%);
+	color: #fff;
+	font-size: 0.75rem;
+	padding: 0.25rem 0.6rem;
+	border-radius: 4px;
+	font-weight: 500;
+}
+
+.certif-card-rating {
+	position: absolute;
+	bottom: 8px;
+	left: 8px;
+	background: rgba(255, 255, 255, 0.95);
+	color: #3d2e2a;
+	font-size: 0.8rem;
+	padding: 0.25rem 0.6rem;
+	border-radius: 4px;
+	font-weight: 600;
+}
+
+.certif-card-content {
+	padding: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.certif-card-title {
+	color: #3d2e2a;
+	font-size: 1.15rem;
+	margin: 0 0 0.5rem 0;
+	font-weight: 600;
+}
+
+.certif-card-meta {
+	color: #6b5750;
+	font-size: 0.9rem;
+	margin: 0 0 0.75rem 0;
+}
+
+.certif-card-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #6b5750;
+	font-size: 0.85rem;
+	margin-top: auto;
+	padding-top: 0.75rem;
+	border-top: 1px solid #f5ebe6;
+}
+
+.certif-card-time,
+.certif-card-servings {
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
+}
+
+/* Empty state */
+.certif-empty {
+	text-align: center;
+	padding: 3rem;
+	color: #8b7b74;
+	font-style: italic;
+	background: #fff;
+	border-radius: 12px;
+	border: 2px dashed #f5ebe6;
+}

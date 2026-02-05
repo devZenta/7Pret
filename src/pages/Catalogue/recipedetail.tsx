@@ -367,9 +367,17 @@ const RecipeDetail = ({ isCustom = false }: RecipeDetailComponentProps) => {
 				<div className="recipe-content">
 					<div>
 						<img
-							src={recipe.image || "https://placehold.co/600x400?text=No+Image"}
+							src={
+								recipe.image && recipe.image !== "url..."
+									? recipe.image
+									: "https://placehold.co/600x400/F5EBE6/CA7C5C?text=🍽️+Recette"
+							}
 							alt={recipe.name}
 							className="recipe-image"
+							onError={(e) => {
+								e.currentTarget.src =
+									"https://placehold.co/600x400/F5EBE6/CA7C5C?text=🍽️+Recette";
+							}}
 						/>
 					</div>
 					<div>

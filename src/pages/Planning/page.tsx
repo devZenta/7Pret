@@ -2,6 +2,15 @@ import { useCallback, useEffect, useState } from "react";
 import recipesData from "../../data/recipes.json";
 import "./Planning.css";
 
+const PLACEHOLDER_IMAGE = "https://placehold.co/100x100/F5EBE6/CA7C5C?text=🍽️";
+
+const getImageUrl = (image: string | null | undefined): string | undefined => {
+	if (!image || image === "url..." || image === "") {
+		return undefined;
+	}
+	return image;
+};
+
 // Types
 interface Ingredient {
 	name: string;
@@ -565,14 +574,11 @@ const Planning = () => {
 											<div
 												className="planning-recipe-thumb"
 												style={{
-													backgroundImage:
-														recipe.image !== "url..."
-															? `url(${recipe.image})`
-															: undefined,
+													backgroundImage: getImageUrl(recipe.image)
+														? `url(${recipe.image})`
+														: `url(${PLACEHOLDER_IMAGE})`,
 												}}
-											>
-												{recipe.image === "url..." && "🍽️"}
-											</div>
+											/>
 											<div className="planning-recipe-info">
 												<h5>{recipe.name}</h5>
 												<span>

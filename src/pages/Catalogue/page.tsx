@@ -1,10 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import recipesData from "../../data/recipes.json";
+import "./Catalogue.css";
 
 const API_BASE_URL = import.meta.env.PROD
 	? "https://7pret-production.up.railway.app"
 	: "http://localhost:5173";
+
+const PLACEHOLDER_IMAGE =
+	"https://placehold.co/400x300/F5EBE6/CA7C5C?text=🍽️+Recette";
 
 interface RecipeProps {
 	id: number;
@@ -28,6 +32,13 @@ interface CustomRecipe {
 	difficulty: string | null;
 	servings: number | null;
 }
+
+const getImageUrl = (image: string | null | undefined): string => {
+	if (!image || image === "url..." || image === "") {
+		return PLACEHOLDER_IMAGE;
+	}
+	return image;
+};
 
 const Catalogue = () => {
 	const recipes: RecipeProps[] = recipesData as unknown as RecipeProps[];
@@ -94,33 +105,19 @@ const Catalogue = () => {
 	}, [customRecipes, filterCuisine, filterType]);
 
 	return (
-		<div>
-			<h2>Bienvenue sur le Catalogue</h2>
-			<p>Voici la liste de nos recettes :</p>
+		<div className="catalogue-container">
+			<div className="catalogue-header">
+				<h2>Catalogue de recettes</h2>
+				<p>Découvrez notre sélection de délicieuses recettes</p>
+			</div>
 
-			<div
-				style={{
-					display: "flex",
-					gap: "20px",
-					marginBottom: "20px",
-					flexWrap: "wrap",
-					alignItems: "center",
-				}}
-			>
-				<div>
-					<label htmlFor="filter-cuisine" style={{ marginRight: "8px" }}>
-						Cuisine :
-					</label>
+			<div className="catalogue-filters">
+				<div className="catalogue-filter-group">
+					<label htmlFor="filter-cuisine">Cuisine :</label>
 					<select
 						id="filter-cuisine"
 						value={filterCuisine}
 						onChange={(e) => setFilterCuisine(e.target.value)}
-						style={{
-							padding: "8px 12px",
-							borderRadius: "4px",
-							border: "1px solid #ccc",
-							minWidth: "150px",
-						}}
 					>
 						<option value="">Toutes les cuisines</option>
 						{uniqueCuisines.map((cuisine) => (
@@ -131,20 +128,12 @@ const Catalogue = () => {
 					</select>
 				</div>
 
-				<div>
-					<label htmlFor="filter-type" style={{ marginRight: "8px" }}>
-						Type :
-					</label>
+				<div className="catalogue-filter-group">
+					<label htmlFor="filter-type">Type :</label>
 					<select
 						id="filter-type"
 						value={filterType}
 						onChange={(e) => setFilterType(e.target.value)}
-						style={{
-							padding: "8px 12px",
-							borderRadius: "4px",
-							border: "1px solid #ccc",
-							minWidth: "150px",
-						}}
 					>
 						<option value="">Tous les types</option>
 						{uniqueTypes.map((type) => (
@@ -158,17 +147,10 @@ const Catalogue = () => {
 				{(filterCuisine || filterType) && (
 					<button
 						type="button"
+						className="catalogue-reset-btn"
 						onClick={() => {
 							setFilterCuisine("");
 							setFilterType("");
-						}}
-						style={{
-							padding: "8px 16px",
-							borderRadius: "4px",
-							border: "none",
-							background: "#c67a53",
-							color: "white",
-							cursor: "pointer",
 						}}
 					>
 						Réinitialiser les filtres
@@ -177,98 +159,94 @@ const Catalogue = () => {
 			</div>
 
 			{filteredCustomRecipes.length > 0 && (
-				<>
-					<h3>Mes recettes personnalisées</h3>
-					<div
-						style={{
-							display: "grid",
-							gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
-							gap: "20px",
-							marginBottom: "30px",
-						}}
-					>
+				<section className="catalogue-section">
+					<h3 className="catalogue-section-title">
+						<span className="catalogue-badge">Mes créations</span>
+						Mes recettes personnalisées
+					</h3>
+					<div className="catalogue-grid">
 						{filteredCustomRecipes.map((recipe) => (
 							<Link
 								to={`/custom-recipe/${recipe.id}`}
 								key={recipe.id}
-								style={{
-									border: "2px solid #4caf50",
-									padding: "10px",
-									borderRadius: "8px",
-									textDecoration: "none",
-									background: "#f9fff9",
-								}}
+								className="catalogue-card catalogue-card-custom"
 							>
-								<h3>{recipe.name}</h3>
-								<p>
-									{recipe.cuisine || "Non spécifié"}
-									{recipe.type && ` - ${recipe.type}`}
-								</p>
-								<p>
-									{(recipe.prepTime || 0) + (recipe.cookTime || 0)} min
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pers: {recipe.servings || "?"}
-								</p>
-								{recipe.image && (
+								<div className="catalogue-card-image">
 									<img
-										src={recipe.image}
+										src={getImageUrl(recipe.image)}
 										alt={recipe.name}
-										style={{ maxWidth: "100%" }}
+										onError={(e) => {
+											e.currentTarget.src = PLACEHOLDER_IMAGE;
+										}}
 									/>
-								)}
+								</div>
+								<div className="catalogue-card-content">
+									<h3 className="catalogue-card-title">{recipe.name}</h3>
+									<p className="catalogue-card-meta">
+										{recipe.cuisine || "Non spécifié"}
+										{recipe.type && ` • ${recipe.type}`}
+									</p>
+									<div className="catalogue-card-footer">
+										<span className="catalogue-card-time">
+											⏱️ {(recipe.prepTime || 0) + (recipe.cookTime || 0)} min
+										</span>
+										<span className="catalogue-card-servings">
+											👥 {recipe.servings || "?"} pers
+										</span>
+									</div>
+								</div>
 							</Link>
 						))}
 					</div>
-				</>
+				</section>
 			)}
 
-			<h3>Recettes proposées</h3>
-			{filteredRecipes.length === 0 ? (
-				<p style={{ fontStyle: "italic", color: "#888" }}>
-					Aucune recette ne correspond aux filtres sélectionnés.
-				</p>
-			) : (
-				<div
-					style={{
-						display: "grid",
-						gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
-						gap: "20px",
-					}}
-				>
-					{filteredRecipes.map((recipe) => (
-						<Link
-							to={`/recipe/${recipe.id}`}
-							key={recipe.id}
-							style={{
-								border: "1px solid #ccc",
-								padding: "10px",
-								borderRadius: "8px",
-								textDecoration: "none",
-							}}
-						>
-							<h3>{recipe.name}</h3>
-							<p>
-								{recipe.cuisine}
-								{recipe.type && ` - ${recipe.type}`}
-							</p>
-							<p>
-								{recipe.Time} min
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pers: {recipe.servings}
-							</p>
-							<img
-								src={recipe.image}
-								alt={`Difficulté: ${recipe.difficulty}`}
-								style={{ maxWidth: "100%" }}
-							/>
-						</Link>
-					))}
-				</div>
-			)}
+			<section className="catalogue-section">
+				<h3 className="catalogue-section-title">Recettes proposées</h3>
+				{filteredRecipes.length === 0 ? (
+					<p className="catalogue-empty">
+						Aucune recette ne correspond aux filtres sélectionnés.
+					</p>
+				) : (
+					<div className="catalogue-grid">
+						{filteredRecipes.map((recipe) => (
+							<Link
+								to={`/recipe/${recipe.id}`}
+								key={recipe.id}
+								className="catalogue-card"
+							>
+								<div className="catalogue-card-image">
+									<img
+										src={getImageUrl(recipe.image)}
+										alt={recipe.name}
+										onError={(e) => {
+											e.currentTarget.src = PLACEHOLDER_IMAGE;
+										}}
+									/>
+									<span className="catalogue-card-difficulty">
+										{recipe.difficulty}
+									</span>
+								</div>
+								<div className="catalogue-card-content">
+									<h3 className="catalogue-card-title">{recipe.name}</h3>
+									<p className="catalogue-card-meta">
+										{recipe.cuisine}
+										{recipe.type && ` • ${recipe.type}`}
+									</p>
+									<div className="catalogue-card-footer">
+										<span className="catalogue-card-time">
+											⏱️ {recipe.Time} min
+										</span>
+										<span className="catalogue-card-servings">
+											👥 {recipe.servings} pers
+										</span>
+									</div>
+								</div>
+							</Link>
+						))}
+					</div>
+				)}
+			</section>
 		</div>
 	);
 };
