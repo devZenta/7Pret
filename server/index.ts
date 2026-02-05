@@ -64,6 +64,8 @@ app.get("*", serveStatic({ path: "./dist/index.html" }));
 
 const port = Number(process.env.PORT) || 3000;
 
+export type AppType = typeof app;
+
 export default {
 	port,
 	fetch: app.fetch,
