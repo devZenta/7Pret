@@ -37,7 +37,7 @@ const RecipeDetail = ({ isCustom = false }: RecipeDetailComponentProps) => {
 	const navigate = useNavigate();
 	const [recipe, setRecipe] = useState<Recipe | null>(null);
 	const [error, setError] = useState<string>("");
-	const [loading, setLoading] = useState(true);
+	const [, setLoading] = useState(true);
 	const [isEditing, setIsEditing] = useState(false);
 	const [editedRecipe, setEditedRecipe] = useState<Recipe | null>(null);
 	const [saving, setSaving] = useState(false);
