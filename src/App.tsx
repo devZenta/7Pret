@@ -12,6 +12,7 @@ import CertifRecipe from "./pages/CertifRecipe/page";
 import CreateRecipe from "./pages/CreateRecipe/page";
 import Home from "./pages/Home/page";
 import Login from "./pages/Login/page";
+import Planning from "./pages/Planning/page";
 import Settings from "./pages/Settings/page";
 import ShoppingList from "./pages/ShoppingList/page";
 import Signup from "./pages/Signup/page";
@@ -33,7 +34,22 @@ function App() {
 				<Route path="/login" element={<Login />} />
 				<Route path="/signup" element={<Signup />} />
 				<Route path="/settings" element={<Settings />} />
-				<Route path="/ShoppingList" element={<ShoppingList />} />
+				<Route
+					path="/Planning"
+					element={
+						<ProtectedRoute>
+							<Planning />
+						</ProtectedRoute>
+					}
+				/>
+				<Route
+					path="/ShoppingList"
+					element={
+						<ProtectedRoute>
+							<ShoppingList />
+						</ProtectedRoute>
+					}
+				/>
 				<Route path="/Catalogue" element={<Catalogue />} />
 				<Route path="/CertifRecipe" element={<CertifRecipe />} />
 				<Route path="CreateRecipe" element={<CreateRecipe />} />
