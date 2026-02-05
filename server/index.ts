@@ -55,7 +55,7 @@ app.doc("/doc", {
 	],
 });
 
-app.get("/ui", swaggerUI({ url: "/doc" }));
+app.get("/swagger", swaggerUI({ url: "/doc" }));
 
 // --- STATIC FILES (Production) ---
 app.use("/*", serveStatic({ root: "./dist" }));
