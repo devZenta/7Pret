@@ -18,6 +18,9 @@ const Header: React.FC<HeaderProps> = ({ logoUrl = "./public/logo.png" }) => {
 						<a href="/">Accueil</a>
 					</li>
 					<li>
+						<a href="/Planning">Planning</a>
+					</li>
+					<li>
 						<a href="/ShoppingList">Panier</a>
 					</li>
 					<li>
