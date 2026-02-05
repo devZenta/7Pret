@@ -13,6 +13,7 @@ import CertifRecipe from "./pages/CertifRecipe/page";
 import CreateRecipe from "./pages/CreateRecipe/page";
 import Home from "./pages/Home/page";
 import Login from "./pages/Login/page";
+import Planning from "./pages/Planning/page";
 import Settings from "./pages/Settings/page";
 import ShoppingList from "./pages/ShoppingList/page";
 import Signup from "./pages/Signup/page";
@@ -50,6 +51,14 @@ const AppContent = () => {
 					element={
 						<ProtectedRoute>
 							<ShoppingList />
+						</ProtectedRoute>
+					}
+				/>
+				<Route
+					path="/Planning"
+					element={
+						<ProtectedRoute>
+							<Planning />
 						</ProtectedRoute>
 					}
 				/>
