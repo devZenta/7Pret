@@ -3,6 +3,7 @@ import {
 	Route,
 	BrowserRouter as Router,
 	Routes,
+	useLocation,
 } from "react-router-dom";
 import Header from "./components/Header";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -16,10 +17,14 @@ import Settings from "./pages/Settings/page";
 import ShoppingList from "./pages/ShoppingList/page";
 import Signup from "./pages/Signup/page";
 
-function App() {
+const AppContent = () => {
+	const location = useLocation();
+	const hideHeader =
+		location.pathname === "/login" || location.pathname === "/signup";
+
 	return (
-		<Router>
-			<Header logoUrl="/logo.png" />
+		<>
+			{!hideHeader && <Header logoUrl="/logo.png" />}
 
 			<Routes>
 				<Route
@@ -32,16 +37,81 @@ function App() {
 				/>
 				<Route path="/login" element={<Login />} />
 				<Route path="/signup" element={<Signup />} />
-				<Route path="/settings" element={<Settings />} />
-				<Route path="/ShoppingList" element={<ShoppingList />} />
-				<Route path="/Catalogue" element={<Catalogue />} />
-				<Route path="/CertifRecipe" element={<CertifRecipe />} />
-				<Route path="CreateRecipe" element={<CreateRecipe />} />
-				<Route path="/recipe/:id" element={<RecipeDetail />} />
-				<Route path="/shopingList/:id" element={<ShoppingList />} />
+				<Route
+					path="/settings"
+					element={
+						<ProtectedRoute>
+							<Settings />
+						</ProtectedRoute>
+					}
+				/>
+				<Route
+					path="/ShoppingList"
+					element={
+						<ProtectedRoute>
+							<ShoppingList />
+						</ProtectedRoute>
+					}
+				/>
+				<Route
+					path="/Catalogue"
+					element={
+						<ProtectedRoute>
+							<Catalogue />
+						</ProtectedRoute>
+					}
+				/>
+				<Route
+					path="/CertifRecipe"
+					element={
+						<ProtectedRoute>
+							<CertifRecipe />
+						</ProtectedRoute>
+					}
+				/>
+				<Route
+					path="/CreateRecipe"
+					element={
+						<ProtectedRoute>
+							<CreateRecipe />
+						</ProtectedRoute>
+					}
+				/>
+				<Route
+					path="/recipe/:id"
+					element={
+						<ProtectedRoute>
+							<RecipeDetail />
+						</ProtectedRoute>
+					}
+				/>
+				<Route
+					path="/custom-recipe/:id"
+					element={
+						<ProtectedRoute>
+							<RecipeDetail isCustom />
+						</ProtectedRoute>
+					}
+				/>
+				<Route
+					path="/shopingList/:id"
+					element={
+						<ProtectedRoute>
+							<ShoppingList />
+						</ProtectedRoute>
+					}
+				/>
 
 				<Route path="*" element={<Navigate replace to="/" />} />
 			</Routes>
+		</>
+	);
+};
+
+function App() {
+	return (
+		<Router>
+			<AppContent />
 		</Router>
 	);
 }
