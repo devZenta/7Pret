@@ -1,0 +1,471 @@
+/* ============================================
+   7Pret - Home Page Styles (Simplified)
+   Page d'accueil avec aperçu du planning
+   
+   Palette de couleurs:
+   - #EEE2DF (beige très clair)
+   - #EED7C5 (beige/pêche clair)
+   - #C89F9C (rose/mauve)
+   - #CA7C5C (terra cotta)
+   - #B36A5E (terra cotta foncé)
+   ============================================ */
+
+.home-container {
+	min-height: calc(100vh - 80px);
+	background: linear-gradient(135deg, #eee2df 0%, #eed7c5 100%);
+	padding: 2rem;
+}
+
+/* Hero Section */
+.home-hero {
+	text-align: center;
+	padding: 3rem 1rem;
+	margin-bottom: 2rem;
+}
+
+.home-hero h1 {
+	font-size: 2.5rem;
+	color: #b36a5e;
+	margin: 0 0 0.5rem 0;
+	font-weight: 700;
+}
+
+.home-hero p {
+	font-size: 1.1rem;
+	color: #6b5750;
+	margin: 0;
+}
+
+/* Stats Section */
+.home-stats {
+	display: flex;
+	justify-content: center;
+	gap: 1.5rem;
+	margin-bottom: 2.5rem;
+	flex-wrap: wrap;
+}
+
+.home-stat-card {
+	background: #fff;
+	padding: 1.25rem 1.5rem;
+	border-radius: 16px;
+	box-shadow: 0 4px 15px rgba(179, 106, 94, 0.12);
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	min-width: 180px;
+	border: 1px solid #eed7c5;
+}
+
+.home-stat-icon {
+	font-size: 2rem;
+	background: linear-gradient(135deg, #eee2df 0%, #eed7c5 100%);
+	padding: 0.75rem;
+	border-radius: 12px;
+}
+
+.home-stat-info h3 {
+	margin: 0;
+	font-size: 1.8rem;
+	color: #ca7c5c;
+	font-weight: 700;
+}
+
+.home-stat-info p {
+	margin: 0;
+	font-size: 0.85rem;
+	color: #b36a5e;
+}
+
+/* Sections */
+.home-section {
+	background: #fff;
+	border-radius: 20px;
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+	box-shadow: 0 4px 20px rgba(179, 106, 94, 0.1);
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #eed7c5;
+}
+
+.home-section-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.5rem;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.home-section-header h2 {
+	margin: 0;
+	font-size: 1.3rem;
+	color: #b36a5e;
+}
+
+.home-date-badge {
+	background: linear-gradient(135deg, #ca7c5c 0%, #b36a5e 100%);
+	color: #fff;
+	padding: 0.4rem 1rem;
+	border-radius: 20px;
+	font-size: 0.85rem;
+	text-transform: capitalize;
+}
+
+.home-view-all {
+	color: #ca7c5c;
+	font-weight: 600;
+	font-size: 0.9rem;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.home-view-all:hover {
+	color: #b36a5e;
+}
+
+/* Loading */
+.home-loading {
+	text-align: center;
+	padding: 2rem;
+}
+
+.home-spinner {
+	width: 40px;
+	height: 40px;
+	border: 4px solid #eed7c5;
+	border-top-color: #ca7c5c;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+	margin: 0 auto;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* Empty Today */
+.home-empty-today {
+	text-align: center;
+	padding: 2rem;
+	color: #c89f9c;
+}
+
+.home-empty-today span {
+	font-size: 3rem;
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+.home-empty-today p {
+	margin: 0 0 1rem 0;
+	color: #b36a5e;
+}
+
+.home-cta-btn {
+	display: inline-block;
+	background: linear-gradient(135deg, #ca7c5c 0%, #b36a5e 100%);
+	color: #fff;
+	padding: 0.75rem 1.5rem;
+	border-radius: 25px;
+	text-decoration: none;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+
+.home-cta-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 15px rgba(202, 124, 92, 0.4);
+	color: #fff;
+}
+
+/* Today Meals */
+.home-today-meals {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.home-meal-card {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+	background: linear-gradient(135deg, #eee2df 0%, #eed7c5 100%);
+	border-radius: 14px;
+	transition: all 0.2s ease;
+}
+
+.home-meal-card:hover {
+	transform: translateX(4px);
+	background: linear-gradient(135deg, #eed7c5 0%, #e5cabb 100%);
+}
+
+.home-meal-icon {
+	font-size: 1.5rem;
+	background: #fff;
+	padding: 0.75rem;
+	border-radius: 12px;
+}
+
+.home-meal-info {
+	flex: 1;
+}
+
+.home-meal-slot {
+	font-size: 0.7rem;
+	color: #c89f9c;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	font-weight: 600;
+}
+
+.home-meal-info h4 {
+	margin: 0.25rem 0;
+	font-size: 1rem;
+	color: #b36a5e;
+}
+
+.home-meal-meta {
+	font-size: 0.8rem;
+	color: #c89f9c;
+}
+
+/* Week Preview */
+.home-week-preview {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 0.75rem;
+	padding: 0.5rem 0;
+	margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+	.home-week-preview {
+		grid-template-columns: repeat(7, 1fr);
+	}
+}
+
+.home-day-preview {
+	text-align: center;
+	padding: 0.75rem 0.5rem;
+	background: #eee2df;
+	border-radius: 12px;
+	transition: all 0.2s ease;
+	border: 1px solid #eed7c5;
+	display: flex;
+	flex-direction: column;
+	min-height: 120px;
+}
+
+.home-day-preview.today {
+	background: linear-gradient(135deg, #ca7c5c 0%, #b36a5e 100%);
+	color: #fff;
+	border-color: #b36a5e;
+}
+
+.home-day-header {
+	margin-bottom: 0.5rem;
+}
+
+.home-day-name {
+	display: block;
+	font-size: 0.7rem;
+	font-weight: 600;
+	text-transform: capitalize;
+	color: #b36a5e;
+}
+
+.home-day-preview.today .home-day-name {
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.home-day-num {
+	display: block;
+	font-size: 1.1rem;
+	font-weight: 700;
+	margin-top: 0.1rem;
+	color: #b36a5e;
+}
+
+.home-day-preview.today .home-day-num {
+	color: #fff;
+}
+
+.home-day-meals {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 0.25rem;
+	flex: 1;
+	min-height: 60px;
+}
+
+.home-no-meal {
+	color: #c89f9c;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+}
+
+.home-day-preview.today .home-no-meal {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.home-meal-name-tag {
+	font-size: 0.65rem;
+	font-weight: 500;
+	color: #b36a5e;
+	background: #fff;
+	padding: 0.3rem 0.5rem;
+	border-radius: 8px;
+	border: 1px solid #eed7c5;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+	display: block;
+	text-align: left;
+	box-shadow: 0 1px 3px rgba(179, 106, 94, 0.1);
+}
+
+.home-day-preview.today .home-meal-name-tag {
+	background: rgba(255, 255, 255, 0.25);
+	color: #fff;
+	border-color: rgba(255, 255, 255, 0.3);
+	box-shadow: none;
+}
+
+/* Planning CTA */
+.home-planning-cta {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem 1.25rem;
+	background: linear-gradient(135deg, #b36a5e 0%, #9a5a50 100%);
+	border-radius: 14px;
+	color: #fff;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.home-planning-cta:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(179, 106, 94, 0.4);
+	color: #fff;
+}
+
+.home-planning-cta > span:first-child {
+	font-size: 1.5rem;
+	background: rgba(255, 255, 255, 0.15);
+	padding: 0.75rem;
+	border-radius: 12px;
+}
+
+.home-planning-cta div {
+	flex: 1;
+}
+
+.home-planning-cta h4 {
+	margin: 0;
+	font-size: 1rem;
+}
+
+.home-planning-cta p {
+	margin: 0.25rem 0 0 0;
+	font-size: 0.8rem;
+	opacity: 0.8;
+}
+
+.home-cta-arrow {
+	font-size: 1.5rem;
+	opacity: 0.7;
+}
+
+/* Quick Actions */
+.home-actions {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	flex-wrap: wrap;
+	max-width: 900px;
+	margin: 0 auto 2rem;
+}
+
+.home-action-card {
+	flex: 1;
+	min-width: 150px;
+	max-width: 200px;
+	background: #fff;
+	padding: 1.5rem 1rem;
+	border-radius: 16px;
+	text-align: center;
+	text-decoration: none;
+	box-shadow: 0 4px 15px rgba(179, 106, 94, 0.1);
+	transition: all 0.3s ease;
+	border: 1px solid #eed7c5;
+}
+
+.home-action-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 8px 25px rgba(179, 106, 94, 0.2);
+	border-color: #ca7c5c;
+}
+
+.home-action-icon {
+	font-size: 2rem;
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+.home-action-card h3 {
+	margin: 0 0 0.25rem 0;
+	font-size: 1rem;
+	color: #b36a5e;
+}
+
+.home-action-card p {
+	margin: 0;
+	font-size: 0.8rem;
+	color: #c89f9c;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+	.home-hero h1 {
+		font-size: 1.8rem;
+	}
+
+	.home-stats {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.home-stat-card {
+		width: 100%;
+		max-width: 280px;
+	}
+
+	.home-week-preview {
+		gap: 0.35rem;
+	}
+
+	.home-day-preview {
+		min-width: 55px;
+	}
+
+	.home-actions {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.home-action-card {
+		width: 100%;
+		max-width: 280px;
+	}
+}
