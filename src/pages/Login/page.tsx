@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { z } from "zod";
 import { signIn } from "../../lib/auth-client";
 import "./Login.css";
@@ -16,7 +16,6 @@ type LoginForm = z.infer<typeof loginSchema>;
 type FormErrors = Partial<Record<keyof LoginForm, string>>;
 
 const Login = () => {
-	const navigate = useNavigate();
 	const [form, setForm] = useState<LoginForm>({ email: "", password: "" });
 	const [errors, setErrors] = useState<FormErrors>({});
 	const [serverError, setServerError] = useState<string | null>(null);
@@ -59,7 +58,7 @@ const Login = () => {
 			return;
 		}
 
-		navigate("/");
+		window.location.href = "/";
 	};
 
 	return (
